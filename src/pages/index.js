@@ -5,6 +5,8 @@ import Layout from "../components/layout"
 import Image from "../components/image"
 import SEO from "../components/seo"
 
+import CategoryScroller from "../components/category-scroller"
+
 class IndexPage extends React.Component {
   constructor(props) {
     super(props)
@@ -27,6 +29,7 @@ class IndexPage extends React.Component {
     const { loading, msg } = this.state
     return (
       <Layout>
+        <CategoryScroller titles={["all", "highlights", "begin", "from:scet", "from:haas", "from:ird", "from:thinking"]}></CategoryScroller>
         <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
         <div
           style={{
