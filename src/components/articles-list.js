@@ -28,7 +28,7 @@ class ArticlesList extends React.Component {
                     input.push(
                         <ArticleCard 
                             title={details.title} 
-                            editor-spotlight={details.editorspotlight}
+                            spotlight={details.spotlight}
                             author={details.author}
                             date = {details.date}
                             excerpt = {details.excerpt}
@@ -47,7 +47,7 @@ class ArticlesList extends React.Component {
                     input.push(
                         <ArticleCard 
                             title={details.title} 
-                            editor-spotlight={details.editorspotlight}
+                            spotlight={details.spotlight}
                             author={details.author}
                             date = {details.date}
                             excerpt = {details.excerpt}

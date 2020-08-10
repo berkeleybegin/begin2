@@ -20,7 +20,7 @@ class ArticleDisplay extends React.Component {
                 "title": "Lorem",
                 "author": "John Doe",
                 "excerpt": "Cheers to the Details",
-                "editor-spotlight": true,
+                "spotlight": true,
                 "date": "date date"
               }
             },
@@ -29,7 +29,7 @@ class ArticleDisplay extends React.Component {
                 "title": "Lorem",
                 "author": "Jane Doe",
                 "excerpt": "lorem ipsum",
-                "editor-spotlight": false,
+                "spotlight": false,
                 "date": "date date"
               }
             }
