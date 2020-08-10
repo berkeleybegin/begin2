@@ -10,7 +10,7 @@ class ArticleCard extends React.Component {
     render() {
         return (
             <>
-            {this.props.editor-spotlight &&
+            {this.props["editor-spotlight"] &&
                 <p>EDITOR'S SPOTLIGHT</p>
             }
             <h1>{this.props.title}</h1>

@@ -21,6 +21,7 @@ class ArticleDisplay extends React.Component {
                 "author": "John Doe",
                 "excerpt": "Cheers to the Details",
                 "editor-spotlight": true,
+                "date": "date date"
               }
             },
             "scet": {
@@ -29,6 +30,7 @@ class ArticleDisplay extends React.Component {
                 "author": "Jane Doe",
                 "excerpt": "lorem ipsum",
                 "editor-spotlight": false,
+                "date": "date date"
               }
             }
           }
