@@ -37,7 +37,6 @@ class CategoryScroller extends React.Component {
     }
 
     handleRightSelect(e) {
-        console.log(this.state.categoryDisplayEnd, this.props.titles.length)
         if (this.state.categoryDisplayEnd < this.props.titles.length) {
             this.setState((prevState) => ({
                 categoryDisplayStart: prevState.categoryDisplayStart+4,
@@ -47,7 +46,6 @@ class CategoryScroller extends React.Component {
     }
 
     render() {
-        console.log(this.state)
         return (
             <>
             <button onClick={this.handleLeftSelect}>Go left</button>

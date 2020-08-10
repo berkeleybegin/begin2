@@ -5,16 +5,33 @@ import Layout from "../components/layout"
 import Image from "../components/image"
 import SEO from "../components/seo"
 
-import CategoryScroller from "../components/category-scroller"
-import ArticleCard from "../components/article-card"
+import CategoryScroller from "../components/articles-category-scroller"
+import ArticlesList from "../components/articles-list"
 
 class ArticleDisplay extends React.Component {
     constructor(props) {
       super(props)
-  
       this.state = {
           tags: ["all", "highlights", "begin", "from:scet", "from:haas", "from:ird", "from:thinking"],
           currentTag: "all",
+          articles: {
+            "begin": {
+              "begin-22-06-2020": {
+                "title": "Lorem",
+                "author": "John Doe",
+                "excerpt": "Cheers to the Details",
+                "editor-spotlight": true,
+              }
+            },
+            "scet": {
+              "scet-25-08-2020": {
+                "title": "Lorem",
+                "author": "Jane Doe",
+                "excerpt": "lorem ipsum",
+                "editor-spotlight": false,
+              }
+            }
+          }
        }
        this.handleTagChange = this.handleTagChange.bind(this);
     }
@@ -30,9 +47,9 @@ class ArticleDisplay extends React.Component {
                 titles={this.state.tags}
                 tagChange={this.handleTagChange}>
             </CategoryScroller>
-            <ArticleCard tag={this.currentTag}></ArticleCard>
+          <ArticlesList current={this.state.currentTag} articles={this.state.articles}></ArticlesList>
         </>
-      )
+      );
     }
   }
   
