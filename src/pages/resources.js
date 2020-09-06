@@ -18,6 +18,7 @@ const possibleTags = [
   "Competitions",
   "Accelerators & Incubators",
   "Training & Support",
+  "New Venture Education"
 ]
 
 export default function ResourcesPage() {
