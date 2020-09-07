@@ -125,7 +125,7 @@ collections:
   - name: "courseConfigs"
     label: "Course Configs"
     label_singular: "Course Config"
-    folder: "src/data/courses/courseConfigs"
+    folder: "src/data/courses/coursesConfigs"
     create: true
     slug: "{{courseKey}}"
     extension: json
