@@ -11,7 +11,7 @@ function GithubAPI(auth) {
   let gh = new GitHub(auth)
 
   this.init = () => {
-    this.setRepo("akirillo", "begin_2.0-jamstack")
+    this.setRepo("berkeleybegin", "begin2")
     return this.setBranch("master")
   }
 
