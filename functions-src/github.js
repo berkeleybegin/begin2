@@ -15,20 +15,24 @@ function GithubAPI(auth) {
     return this.setBranch("master")
   }
 
-  this.getConfigs = collection =>
+  this.getConfigs = (collection) =>
     repo
-      .getContents(currentBranch.name, `src/data/${collection}/configs/`, false)
+      .getContents(
+        currentBranch.name,
+        `src/data/${collection}/${collection}configs/`,
+        false
+      )
       .then(({ data }) => {
         const blobPromises = []
-        data.forEach(file => {
+        data.forEach((file) => {
           blobPromises.push(repo.getBlob(file.sha))
         })
         return Promise.all(blobPromises)
       })
-      .then(responses => {
-        return responses.map(res => res.data)
+      .then((responses) => {
+        return responses.map((res) => res.data)
       })
-      .catch(error => error)
+      .catch((error) => error)
 
   /**
    * Sets the current repository to make push to
@@ -37,7 +41,7 @@ function GithubAPI(auth) {
    * @param {string} repoName Name of the repository
    * @return void
    */
-  this.setRepo = function(userName, repoName) {
+  this.setRepo = function (userName, repoName) {
     repo = gh.getRepo(userName, repoName)
   }
 
@@ -48,14 +52,14 @@ function GithubAPI(auth) {
    * @param {string} branchName The name of the branch
    * @return {Promise}
    */
-  this.setBranch = function(branchName) {
+  this.setBranch = function (branchName) {
     if (!repo) {
       throw "Repository is not initialized"
     }
 
-    return repo.listBranches().then(branches => {
+    return repo.listBranches().then((branches) => {
       let branchExists = branches.data.find(
-        branch => branch.name === branchName
+        (branch) => branch.name === branchName
       )
 
       if (!branchExists) {
@@ -76,7 +80,7 @@ function GithubAPI(auth) {
    *                            containing data to push
    * @return {Promise}
    */
-  this.pushFiles = function(message, files) {
+  this.pushFiles = function (message, files) {
     if (!repo) {
       throw "Repository is not initialized"
     }
@@ -90,7 +94,7 @@ function GithubAPI(auth) {
       .then(createTree)
       .then(() => createCommit(message))
       .then(updateHead)
-      .catch(e => {
+      .catch((e) => {
         console.error(e)
       })
   }
@@ -101,7 +105,7 @@ function GithubAPI(auth) {
    * @return {Promise}
    */
   function getCurrentCommitSHA() {
-    return repo.getRef("heads/" + currentBranch.name).then(ref => {
+    return repo.getRef("heads/" + currentBranch.name).then((ref) => {
       currentBranch.commitSHA = ref.data.object.sha
     })
   }
@@ -112,7 +116,7 @@ function GithubAPI(auth) {
    * @return {Promise}
    */
   function getCurrentTreeSHA() {
-    return repo.getCommit(currentBranch.commitSHA).then(commit => {
+    return repo.getCommit(currentBranch.commitSHA).then((commit) => {
       currentBranch.treeSHA = commit.data.tree.sha
     })
   }
@@ -143,7 +147,7 @@ function GithubAPI(auth) {
    * @return {Promise}
    */
   function createFile(fileInfo) {
-    return repo.createBlob(fileInfo.content).then(blob => {
+    return repo.createBlob(fileInfo.content).then((blob) => {
       filesToCommit.push({
         sha: blob.data.sha,
         path: fileInfo.path,
@@ -159,9 +163,11 @@ function GithubAPI(auth) {
    * @return {Promise}
    */
   function createTree() {
-    return repo.createTree(filesToCommit, currentBranch.treeSHA).then(tree => {
-      newCommit.treeSHA = tree.data.sha
-    })
+    return repo
+      .createTree(filesToCommit, currentBranch.treeSHA)
+      .then((tree) => {
+        newCommit.treeSHA = tree.data.sha
+      })
   }
 
   /**
@@ -173,7 +179,7 @@ function GithubAPI(auth) {
   function createCommit(message) {
     return repo
       .commit(currentBranch.commitSHA, newCommit.treeSHA, message)
-      .then(commit => {
+      .then((commit) => {
         newCommit.sha = commit.data.sha
       })
   }
