@@ -2,8 +2,8 @@ name: Daily Data Sourcing
 
 
 on:
-  # schedule:
-  #   - cron: '0 0 * * *'
+  schedule:
+    - cron: '0 0 * * *'
   workflow_dispatch:
   
 
@@ -31,9 +31,9 @@ jobs:
           url: https://confident-shaw-66a094.netlify.app/functions/source-rss
           headers: '{ "Authorization": "Bearer ${{ steps.gen-jwt.outputs.token }}" }'
 
-      - name: Source FB
-        id: source-fb
-        uses: Satak/webrequest-action@v1.2.3
-        with:
-          url: https://confident-shaw-66a094.netlify.app/functions/source-fb
-          headers: '{ "Authorization": "Bearer ${{ steps.gen-jwt.outputs.token }}" }'
+      # - name: Source FB
+      #   id: source-fb
+      #   uses: Satak/webrequest-action@v1.2.3
+      #   with:
+      #     url: https://confident-shaw-66a094.netlify.app/functions/source-fb
+      #     headers: '{ "Authorization": "Bearer ${{ steps.gen-jwt.outputs.token }}" }'
