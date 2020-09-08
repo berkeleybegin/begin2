@@ -19,9 +19,9 @@ FB.setAccessToken(process.env.FB_KEY)
  * @param {netlifyCallback} callback: Defined like callback in an AWS Lambda function, used to return either an error, or a response object.
  */
 const sourceFB = (event, _context, callback) => {
-  const token = event.headers.Authorization.replace(/Bearer/i, "").trim()
-  jwt.verify(token, process.env.JWT_SECRET, (error) => {
-    if (!error) {
+  // const token = event.headers.Authorization.replace(/Bearer/i, "").trim()
+  // jwt.verify(token, process.env.JWT_SECRET, (error) => {
+    // if (!error) {
       gh.init()
         .then(() => {
           FB.api(
@@ -79,10 +79,10 @@ const sourceFB = (event, _context, callback) => {
         .catch((err) => {
           callback(err)
         })
-    } else {
-      console.log(error)
-    }
-  })
+  //   } else {
+  //     console.log(error)
+  //   }
+  // })
 }
 
 module.exports.handler = sourceFB
