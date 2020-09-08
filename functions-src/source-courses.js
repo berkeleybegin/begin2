@@ -81,7 +81,7 @@ const sourceCourses = (event, _context, callback) => {
           ).then(() => {
             callback(null, {
               statusCode: 200,
-              body: JSON.stringify(filesToPush),
+              body: JSON.stringify(filesToPush) + "HI",
             })
           })
         })
