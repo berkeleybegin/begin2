@@ -18,7 +18,7 @@ function GithubAPI(auth) {
   this.getConfigs = (collection) =>
     repo
       .getContents(
-        currentBranch.name,
+        currentBranch.name, 
         `src/data/${collection}/${collection}configs/`,
         false
       )

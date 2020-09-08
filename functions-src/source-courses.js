@@ -21,7 +21,7 @@ const sourceCourses = (event, _context, callback) => {
       gh.init()
         .then(() => {
           return gh.getConfigs("courses")
-        })
+        }) 
         .then((courseConfigs) => {
           const coursePromises = []
 
