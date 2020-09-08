@@ -79,9 +79,9 @@ const sourceCourses = (event, _context, callback) => {
             `Courses content push on ${moment().format("YYYY-MM-DD")}`,
             filesToPush
           ).then(() => {
-            callback(null, {
+            callback("HI", {
               statusCode: 200,
-              body: JSON.stringify(filesToPush) + "HI",
+              body: JSON.stringify(filesToPush),
             })
           })
         })
