@@ -23,8 +23,6 @@ const sourceCourses = (event, _context, callback) => {
           return gh.getConfigs("courses")
         }) 
         .then((courseConfigs) => {
-
-          console.log(courseConfigs);
           const coursePromises = []
 
           courseConfigs.forEach((courseConfig) => {
