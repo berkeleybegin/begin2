@@ -19,7 +19,7 @@ function GithubAPI(auth) {
     repo
       .getContents(
         currentBranch.name, 
-        `src/data/${collection}/${collection}configs/`,
+        `src/data/${collection}/${collection}Configs/`,
         false
       )
       .then(({ data }) => {
