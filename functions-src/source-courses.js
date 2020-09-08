@@ -4,7 +4,7 @@
 
 const jwt = require("jsonwebtoken")
 const moment = require("moment")
-const { v4: uuidv4 } = require("uuid")
+const { v4: uuidv4 } = girequire("uuid")
 const gh = require("./github")
 const axios = require("axios")
 /**
@@ -15,9 +15,9 @@ const axios = require("axios")
  * @param {netlifyCallback} callback: Defined like callback in an AWS Lambda function, used to return either an error, or a response object.
  */
 const sourceCourses = (event, _context, callback) => {
-  const token = event.headers.authorization.replace(/Bearer/i, "").trim()
-  jwt.verify(token, process.env.JWT_SECRET, (error) => {
-    if (!error) {
+  // const token = event.headers.authorization.replace(/Bearer/i, "").trim()
+  // jwt.verify(token, process.env.JWT_SECRET, (error) => {
+    // if (!error) {
       gh.init()
         .then(() => {
           return gh.getConfigs("courses")
@@ -79,7 +79,7 @@ const sourceCourses = (event, _context, callback) => {
             `Courses content push on ${moment().format("YYYY-MM-DD")}`,
             filesToPush
           ).then(() => {
-            callback("HI", {
+            callback(null, {
               statusCode: 200,
               body: JSON.stringify(filesToPush),
             })
@@ -88,10 +88,10 @@ const sourceCourses = (event, _context, callback) => {
         .catch((err) => {
           callback(err)
         })
-    } else {
-      console.log(error)
-    }
-  })
+    // } else {
+    //   console.log(error)
+    // }
+  // })
 }
 
 module.exports.handler = sourceCourses
