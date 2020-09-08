@@ -4,7 +4,7 @@
 
 const jwt = require("jsonwebtoken")
 const moment = require("moment")
-const { v4: uuidv4 } = girequire("uuid")
+const { v4: uuidv4 } = require("uuid")
 const gh = require("./github")
 const axios = require("axios")
 /**
