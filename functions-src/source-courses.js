@@ -31,7 +31,7 @@ const sourceCourses = (event, _context, callback) => {
             coursePromises.push(
               axios({
                 method: "GET",
-                url: `https://apis.berkeley.edu/uat/sis/v2/courses/${courseConfig.id}`,
+                url: `https://apis.berkeley.edu/uat/sis/v2/courses/${courseConfig.id}?id-type=cms-version-independent-id`,
                 params: {
                   "id-type": "cms-version-independent-id",
                 },
