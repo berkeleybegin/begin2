@@ -2,6 +2,7 @@
  * @callback netlifyCallback
  */
 
+const sha = require("sha1");
 const jwt = require("jsonwebtoken")
 const moment = require("moment")
 const { v4: uuidv4 } = require("uuid")
@@ -56,7 +57,7 @@ const sourceCourses = (event, _context, callback) => {
             const { course } = courseObj
             const { courseKey } = courseObj
 
-            const id = uuidv4()
+            const id = sha(course.description);
 
             filesToPush.push({
               content: Buffer.from(

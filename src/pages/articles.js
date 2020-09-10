@@ -14,6 +14,7 @@ import "slick-carousel/slick/slick-theme.css"
 export const query = graphql`
   query rssQuery {
     allRssJson(sort: { fields: date, order: DESC }) {
+      distinct(field: title)
       nodes {
         author
         date
