@@ -8,7 +8,6 @@ import Layout from "../components/layout"
 import PropTypes from "prop-types"
 
 const possibleTags = [
-  "Events",
   "Mentoring",
   "Education & Awareness",
   "Funding & Grants",
@@ -23,17 +22,17 @@ const possibleTags = [
 
 export default function ResourcesPage() {
   const allResources = useStaticQuery(graphql`
-    query resourcesQuery {
-      allIrdJson {
-        nodes {
-          description
-          title
-          url
-          tags
-          id
-        }
+  query resourcesQuery {
+    allIrdJson(sort: {fields: title, order: ASC}) {
+      nodes {
+        description
+        title
+        url
+        tags
+        id
       }
     }
+  }  
   `).allIrdJson.nodes
 
   const [resources, setResources] = useState(allResources)
