@@ -99,7 +99,7 @@ export default function ArticlesPage({ data }) {
           </Chip>
         ))}
       </Flex>
-      <Heading sx={{ mb: 3 }}>This Week:</Heading>
+      <Heading sx={{ mb: 3 }}>This Month:</Heading>
       {weekArticles.length > 0 ? (
         <Slider
           dots={true}
@@ -116,15 +116,15 @@ export default function ArticlesPage({ data }) {
           ))}
         </Slider>
       ) : (
-        <Heading as="h3">No articles this week!</Heading>
+        <Heading as="h3">No articles this month!</Heading>
       )}
-      <Heading sx={{ mt: 5, mb: 3 }}>This Month:</Heading>
+      <Heading sx={{ mt: 5, mb: 3 }}>This Year:</Heading>
       {monthArticles.length > 0 ? (
         monthArticles.map((article) => (
           <ArticleCard key={article.id} article={article} />
         ))
       ) : (
-        <Heading as="h3">No articles this month!</Heading>
+        <Heading as="h3">No articles this year!</Heading>
       )}
     </Layout>
   )
