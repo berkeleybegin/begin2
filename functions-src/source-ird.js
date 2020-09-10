@@ -67,7 +67,7 @@ const sourceIRD = (event, _context, callback) => {
               })
 
               gh.pushFiles(
-                "Testing IRD content pushing to the proper folder with id",
+                `Courses content push on ${moment().format("YYYY-MM-DD")}`,
                 filesToPush
               ).then(() => {
                 callback(null, {
