@@ -37,12 +37,12 @@ export const query = graphql`
 export default function ArticlesPage({ data }) {
   const allArticles = data.allRssJson.nodes
   const allWeekArticles = allArticles.filter((article) =>
-    moment(article.date).isSame(moment(), "week")
+    moment(article.date).isSame(moment(), "month")
   )
   const allMonthArticles = allArticles.filter(
     (article) =>
-      moment(article.date).isSame(moment(), "month") &&
-      !moment(article.date).isSame(moment(), "week")
+      moment(article.date).isSame(moment(), "year") &&
+      !moment(article.date).isSame(moment(), "month")
   )
   const [weekArticles, setWeekArticles] = useState(allWeekArticles)
   const [monthArticles, setMonthArticles] = useState(allMonthArticles)
@@ -65,15 +65,15 @@ export default function ArticlesPage({ data }) {
     setWeekArticles(
       allWeekArticles.filter(
         (article) =>
-          moment(article.date).isSame(moment(), "week") &&
+          moment(article.date).isSame(moment(), "month") &&
           (activeTags.length === 0 || activeTags.includes(article.feedKey))
       )
     )
     setMonthArticles(
       allMonthArticles.filter(
         (article) =>
-          moment(article.date).isSame(moment(), "month") &&
-          !moment(article.date).isSame(moment(), "week") &&
+          moment(article.date).isSame(moment(), "year") &&
+          !moment(article.date).isSame(moment(), "month") &&
           (activeTags.length === 0 || activeTags.includes(article.feedKey))
       )
     )
