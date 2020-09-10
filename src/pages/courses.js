@@ -8,18 +8,20 @@ import Layout from "../components/layout"
 import PropTypes from "prop-types"
 
 export const query = graphql`
-  query coursesQuery {
-    allCoursesJson {
-      nodes {
-        id
-        number
-        title
-        description
-        units
-        department
-      }
+query CoursesPageQuery {
+  allCoursesJson {
+    distinct(field: id)
+    nodes {
+      courseKey
+      department
+      description
+      id
+      number
+      title
+      units
     }
   }
+}
 `
 
 export default function CoursesPage({ data }) {
