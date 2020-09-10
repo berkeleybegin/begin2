@@ -2,6 +2,7 @@
  * @callback netlifyCallback
  */
 
+const sha = require("sha1")
 const _ = require("lodash")
 const axios = require("axios")
 const moment = require("moment")
@@ -42,7 +43,7 @@ const sourceIRD = (event, _context, callback) => {
               ]
 
               resourcesResponse.data.forEach((resource) => {
-                const id = uuidv4()
+                const id = sha(resouce.desc);
                 const date = moment(resource.updated_at).format("YYYY-MM-DD")
                 const tags = _.flatMap(tagFields, (field) =>
                   _.map(
