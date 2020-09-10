@@ -2,6 +2,7 @@
  * @callback netlifyCallback
  */
 
+const sha = require("sha1")
 const Parser = require("rss-parser")
 const moment = require("moment")
 const { v4: uuidv4 } = require("uuid")
@@ -48,7 +49,7 @@ const sourceRSS = (event, _context, callback) => {
             const { feedKey } = feedObj
             feed.items.forEach(item => {
               const date = moment(item.isoDate).format("YYYY-MM-DD")
-              const id = uuidv4()
+              const id = sha(item.contentSnippet)
 
               if (item.contentSnippet) {
                 filesToPush.push({
