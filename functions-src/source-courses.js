@@ -56,11 +56,13 @@ const sourceCourses = (event, _context, callback) => {
             const { course } = courseObj
             const { courseKey } = courseObj
 
+            const id = uuidv4()
+
             filesToPush.push({
               content: Buffer.from(
                 JSON.stringify({
                   templateKey: "course",
-                  id: course.id,
+                  id,
                   courseKey,
                   number: course.displayName,
                   title: course.title,

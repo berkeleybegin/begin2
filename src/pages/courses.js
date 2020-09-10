@@ -10,7 +10,7 @@ import PropTypes from "prop-types"
 export const query = graphql`
 query CoursesPageQuery {
   allCoursesJson {
-    distinct(field: id)
+    distinct(field: courseKey)
     nodes {
       courseKey
       department
