@@ -43,7 +43,7 @@ const sourceIRD = (event, _context, callback) => {
               ]
 
               resourcesResponse.data.forEach((resource) => {
-                const id = sha(resouce.desc);
+                const id = sha(resource.desc);
                 const date = moment(resource.updated_at).format("YYYY-MM-DD")
                 const tags = _.flatMap(tagFields, (field) =>
                   _.map(
