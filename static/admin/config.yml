@@ -43,8 +43,8 @@ collections:
       - { label: "Url", name: "url", widget: "string" }
 
   - name: "fbEvents"
-    label: "Facebook Events"
-    label_singular: "Facebook Event"
+    label: "Events"
+    label_singular: "Event"
     folder: "src/data/fb"
     create: true
     slug: "{{page}}-{{date}}-{{id}}"
@@ -60,8 +60,8 @@ collections:
       - { label: "Location", name: "location", widget: "string" }
 
   - name: "fbConfigs"
-    label: "Facebook Configs"
-    label_singular: "Facebook Config"
+    label: "Event Configs"
+    label_singular: "Event Config"
     folder: "src/data/fb/fbConfigs"
     create: true
     slug: "{{pageKey}}"
