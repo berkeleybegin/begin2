@@ -49,7 +49,7 @@ const sourceRSS = (event, _context, callback) => {
             const { feedKey } = feedObj
             feed.items.forEach(item => {
               const date = moment(item.isoDate).format("YYYY-MM-DD")
-              const id = sha(item.contentSnippet)
+              const id = sha(item.title)
 
               if (item.contentSnippet) {
                 filesToPush.push({
