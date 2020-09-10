@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { jsx, Card, Heading, Text, Link, Flex } from "theme-ui"
+import { jsx, Card, Heading, Text, Link, Flex, Divider } from "theme-ui"
 import { graphql } from "gatsby"
 import moment from "moment"
 import PageTitle from "../components/page_title"
@@ -8,7 +8,7 @@ import PropTypes from "prop-types"
 
 export const query = graphql`
   query EventsPageQuery {
-    allFbJson {
+    allFbJson(sort: { fields: date, order: ASC }) {
       nodes {
         id
         date
@@ -75,11 +75,12 @@ function EventCard({ isClosest, event }) {
           justifyContent: "space-between",
         }}
       >
-        <Heading variant="subtitle">At {event.location}</Heading>
-        <Text sx={{ mr: 2, fontWeight: 700 }}>
-          Due {moment(event.date).format("MM/DD/YYYY")}
+        <Text sx={{ mr: 2 }}>
+          Due <div sx={{fontWeight: 600, display: "inline"}}> {moment(event.date).format('MMM D, YYYY')} </div>| In {moment(event.date).subtract(moment()).format('D')} Days
         </Text>
+        {/* <Text sx={{paddingRight: '10px'}}>At {event.location}</Text> */}
       </Flex>
+      <br></br>
       <Text>{event.description}</Text>
     </Card>
   )
