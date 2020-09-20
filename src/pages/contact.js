@@ -45,8 +45,8 @@ export default function ContactPage() {
           Topic Areas
           </Label>  
         <Flex sx={{flexDirection: 'column'}}>
-          <Label>
-              <Checkbox name="patent"/> <Text> Patent</Text> 
+          <Label name="patent">
+              <Checkbox/> <Text> Patent</Text> 
           </Label>
           <Label>
               <Checkbox/> <Text> Legal</Text>
