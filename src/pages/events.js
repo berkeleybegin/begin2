@@ -26,7 +26,6 @@ export const query = graphql`
 export default function EventsPage({ data }) {
   const allEvents = data.allFbJson.nodes
   const closestEvent = allEvents[0]
-  console.log(closestEvent)
   return (
     <Layout>
       <PageTitle>Events</PageTitle>
