@@ -41,29 +41,17 @@ export default function ContactPage() {
           <option>Media Partner</option>
           <option>Industry Partner</option>
         </Select>
-        <Label mb={1}>
+        <Label htmlFor="topicarea" mb={1}>
           Topic Areas
           </Label>  
-        <Flex sx={{flexDirection: 'column'}}>
-          <Label>
-              <Checkbox name="patent"/> <Text> Patent</Text> 
-          </Label>
-          <Label>
-              <Checkbox/> <Text> Legal</Text>
-          </Label>
-          <Label>
-            <Checkbox/> <Text> Intellectual Property</Text> 
-          </Label>
-          <Label>
-            <Checkbox/> <Text> Courses</Text> 
-          </Label>
-          <Label>
-            <Checkbox/><Text> Mentorship</Text>
-          </Label>
-          <Label>
-            <Checkbox/> <Text> Alumni</Text> 
-          </Label>
-        </Flex>
+        <Select name="topicarea" id="affiliation-select" mb={3}>
+          <option>Patent</option>
+          <option>Legal</option>
+          <option>Intellectual Property</option>
+          <option>Courses</option>
+          <option>Mentorship</option>
+          <option>Alumni</option>
+        </Select>
         <br></br>
         <Label htmlFor="message" sx={{ mb: 1 }}>
           Message
