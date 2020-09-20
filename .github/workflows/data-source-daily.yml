@@ -21,15 +21,15 @@ jobs:
           JWT_SECRET: ${{ secrets.JWT_SECRET }}
         uses: morzzz007/github-actions-jwt-generator@1.0.1
         with:
-          secret: ${{ env.JWT_SECRET }}
+          # secret: ${{ env.JWT_SECRET }}
           payload: '{ "exp": ${{steps.get-exp.outputs.exp}} }'
 
       - name: Source RSS
         id: source-rss
         uses: Satak/webrequest-action@v1.2.3
         with:
-          url: https://confident-shaw-66a094.netlify.app/functions/source-rss
-          headers: '{ "Authorization": "Bearer ${{ steps.gen-jwt.outputs.token }}" }'
+          url: https://festive-euler-7b8047.netlify.app//functions/source-rss
+          # headers: '{ "Authorization": "Bearer ${{ steps.gen-jwt.outputs.token }}" }'
 
       # - name: Source FB
       #   id: source-fb

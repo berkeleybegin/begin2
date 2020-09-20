@@ -46,7 +46,7 @@ export default function ContactPage() {
           </Label>  
         <Flex sx={{flexDirection: 'column'}}>
           <Label>
-              <Checkbox/> <Text> Patent</Text> 
+              <Checkbox name="patent"/> <Text> Patent</Text> 
           </Label>
           <Label>
               <Checkbox/> <Text> Legal</Text>
