@@ -63,7 +63,7 @@ export default function ResourcesPage() {
 
   return (
     <Layout>
-      <PageTitle>Resources</PageTitle>
+      <PageTitle>Directory</PageTitle>
       <Input
         placeholder="Search"
         sx={{ mb: 3 }}

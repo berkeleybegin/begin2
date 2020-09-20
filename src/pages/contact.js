@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { jsx, Input, Label, Textarea, Select, Button } from "theme-ui"
+import { jsx, Box, Checkbox, Input, Label, Textarea, Select, Button, Text, Flex } from "theme-ui"
 import PageTitle from "../components/page_title"
 import Layout from "../components/layout"
 
@@ -34,11 +34,36 @@ export default function ContactPage() {
         </Label>
         <Select name="affiliation" id="affiliation-select" mb={3}>
           <option>Student</option>
+          <option>Aspiring Student</option>
           <option>Alumnus</option>
           <option>Faculty / Staff</option>
           <option>Media Partner</option>
           <option>Industry Partner</option>
         </Select>
+        <Label mb={1}>
+          Topic Areas
+          </Label>  
+        <Flex>
+          <Label>
+              <Checkbox/> <Text> Patent</Text> 
+          </Label>
+          <Label>
+              <Checkbox/> <Text> Legal</Text>
+          </Label>
+          <Label>
+            <Checkbox/> <Text> Intellectual Property</Text> 
+          </Label>
+          <Label>
+            <Checkbox/> <Text> Courses</Text> 
+          </Label>
+          <Label>
+            <Checkbox/><Text> Mentorship</Text>
+          </Label>
+          <Label>
+            <Checkbox/> <Text> Alumni</Text> 
+          </Label>
+        </Flex>
+        <br></br>
         <Label htmlFor="message" sx={{ mb: 1 }}>
           Message
         </Label>
