@@ -1,0 +1,6 @@
+{
+  "templateKey": "rss-config",
+  "title": "Forbes",
+  "feedKey": "forbes",
+  "url": " https://www.forbes.com/entrepreneurs/feed2/"
+}
