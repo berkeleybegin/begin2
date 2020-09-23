@@ -21,8 +21,8 @@ export default {
   },
   space: [0, 4, 8, 16, 32, 64, 128, 256],
   fonts: {
-    body: "freight-sans-pro, system-ui, sans-serif",
-    heading: "freight-sans-pro, system-ui, sans-serif",
+    body: "freight-sans-pro, Open Sans, system-ui, sans-serif",
+    heading: "freight-micro-pro, Verdana, system-ui, sans-serif",
     monospace: "Menlo, monospace",
   },
   fontWeights: {
