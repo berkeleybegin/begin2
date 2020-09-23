@@ -87,22 +87,6 @@ collections:
       - { label: "Url", name: "url", widget: "string" }
       - { label: "Description", name: "description", widget: "markdown" }
       - { label: "Date", name: "date", widget: "datetime" }
-  
-  - name: "curatedResources"
-    label: "Curated Resources"
-    label_singular: "Curated Resource"
-    folder: "src/data/resource"
-    create: true
-    slug: "resource-{{date}}-{{id}}"
-    extension: json
-    fields:
-      - { label: "Template Key", name: "templateKey", widget: "hidden", default: "ird-resource" }
-      - { label: "ID", name: "id", widget: "string" }
-      - { label: "Tags", name: "tags", widget: "list" }
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Url", name: "url", widget: "string" }
-      - { label: "Description", name: "description", widget: "markdown" }
-      - { label: "Date", name: "date", widget: "datetime" }
 
   
   - name: "opportunities"
