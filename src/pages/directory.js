@@ -1,5 +1,15 @@
 /** @jsx jsx */
-import { jsx, Card, Heading, Text, Link, Input, Flex } from "theme-ui"
+import {
+  jsx,
+  Card,
+  Heading,
+  Text,
+  Link,
+  Input,
+  Flex,
+  Label,
+  Checkbox,
+} from "theme-ui"
 import Chip from "../components/chip"
 import { useState, useEffect } from "react"
 import { useStaticQuery, graphql } from "gatsby"
@@ -17,26 +27,26 @@ const possibleTags = [
   "Competitions",
   "Accelerators & Incubators",
   "Training & Support",
-  "New Venture Education"
+  "New Venture Education",
 ]
 
 export default function ResourcesPage() {
   const allResources = useStaticQuery(graphql`
-  query resourcesQuery {
-    allIrdJson(sort: {fields: title, order: ASC}) {
-      nodes {
-        description
-        title
-        url
-        tags
-        id
+    query resourcesQuery {
+      allIrdJson(sort: { fields: title, order: ASC }) {
+        nodes {
+          description
+          title
+          url
+          tags
+          id
+        }
       }
     }
-  }  
   `).allIrdJson.nodes
 
   const [resources, setResources] = useState(allResources)
-  const [activeTags, setActiveTags] = useState([])
+  const [activeTags, setActiveTags] = useState(["Curated"])
   const [searchValue, setSearchValue] = useState("")
 
   function toggleTag(value) {
@@ -63,6 +73,11 @@ export default function ResourcesPage() {
 
   return (
     <Layout>
+      <Label>
+        <Checkbox onClick={() => toggleTag("Curated")} defaultChecked={true} />
+        Curated
+      </Label>
+
       <PageTitle>Directory</PageTitle>
       <Input
         placeholder="Search"
