@@ -1,9 +1,9 @@
 {
   "templateKey": "ird-resource",
   "date": "2020-10-04T01:30:55.868Z",
-  "title": "Synthetic Biology Institute",
-  "url": "http://synbio.berkeley.edu/",
-  "id": "b48bc5be-4559-4909-9959-e42f75343589",
+  "title": "Blum Center Social Innovator OnRamp",
+  "url": "https://blumcenter.berkeley.edu/",
+  "id": "420900f4-ad8d-4827-a308-188db88a1e91",
   "tags": [
     "Education and Awareness",
     "Curated",
@@ -11,5 +11,5 @@
     "Graduate",
     "Professor"
   ],
-  "description": "The Synthetic Biology Institute at UC Berkeley (SBI)\nis working to make the engineering of new complex function in cells vastly more efficient, reliable, predictable, and safe. Its breakthroughs will speed the development of biologically engineered solutions to pressing global problems related to health, materials, energy, environment, and security."
+  "description": "The Blum Center for Developing Economies leverages the talent, enthusiasm, and energy of the University of California, Berkeley community to address the grand challenge of global poverty. Our interdisciplinary problem-solving approach draws on students and faculty dedicated to facing this challenge through innovative initiatives, education, and research. "
 }
