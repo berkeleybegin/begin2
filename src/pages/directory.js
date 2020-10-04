@@ -20,7 +20,7 @@ import PropTypes from "prop-types"
 
 const possibleTags = [
   "Mentoring",
-  "Education & Awareness",
+  "Education and Awareness",
   "Funding & Grants",
   "Networks",
   "Student Groups",
