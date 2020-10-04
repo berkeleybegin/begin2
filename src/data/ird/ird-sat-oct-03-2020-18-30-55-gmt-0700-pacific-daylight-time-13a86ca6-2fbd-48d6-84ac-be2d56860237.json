@@ -1,9 +1,9 @@
 {
   "templateKey": "ird-resource",
   "date": "2020-10-04T01:30:55.868Z",
-  "title": "Berkeley Master of Design",
-  "url": "https://design.berkeley.edu/",
-  "id": "6b86ffc9-ce63-410d-a0f8-cefac55b2bc6",
+  "title": "BIDS Berkeley Institute of Data Science",
+  "url": "https://bids.berkeley.edu/",
+  "id": "9ce704a0-f1d5-4ebc-8a8a-84df693de713",
   "tags": [
     "Education and Awareness",
     "Curated",
@@ -11,5 +11,5 @@
     "Graduate",
     "Professor"
   ],
-  "description": "The Promises And Perils Of Designing With Data.\nToday’s most pressing challenges cut across disciplinary boundaries, requiring thoughtful new approaches."
+  "description": "BIDS is a central hub of data-intensive research, open source software, and data science training programs at UC Berkeley."
 }
