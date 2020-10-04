@@ -1,9 +1,9 @@
 {
   "templateKey": "ird-resource",
   "date": "2020-10-04T01:30:55.868Z",
-  "title": "BIDS Berkeley Institute of Data Science",
-  "url": "https://bids.berkeley.edu/",
-  "id": "9ce704a0-f1d5-4ebc-8a8a-84df693de713",
+  "title": "Synthetic Biology Institute",
+  "url": "http://synbio.berkeley.edu/",
+  "id": "b48bc5be-4559-4909-9959-e42f75343589",
   "tags": [
     "Education and Awareness",
     "Curated",
@@ -11,5 +11,5 @@
     "Graduate",
     "Professor"
   ],
-  "description": "BIDS is a central hub of data-intensive research, open source software, and data science training programs at UC Berkeley."
+  "description": "The Synthetic Biology Institute at UC Berkeley (SBI)\nis working to make the engineering of new complex function in cells vastly more efficient, reliable, predictable, and safe. Its breakthroughs will speed the development of biologically engineered solutions to pressing global problems related to health, materials, energy, environment, and security."
 }
