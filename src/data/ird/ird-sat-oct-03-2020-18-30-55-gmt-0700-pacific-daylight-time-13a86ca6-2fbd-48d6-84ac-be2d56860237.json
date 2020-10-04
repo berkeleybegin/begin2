@@ -1,9 +1,9 @@
 {
   "templateKey": "ird-resource",
   "date": "2020-10-04T01:30:55.868Z",
-  "title": "Berkeley-Haas Entrepreneurship Program",
-  "url": "https://entrepreneurship.berkeley.edu/",
-  "id": "13a86ca6-2fbd-48d6-84ac-be2d56860237",
+  "title": "Berkeley Master of Design",
+  "url": "https://design.berkeley.edu/",
+  "id": "6b86ffc9-ce63-410d-a0f8-cefac55b2bc6",
   "tags": [
     "Education and Awareness",
     "Curated",
@@ -11,5 +11,5 @@
     "Graduate",
     "Professor"
   ],
-  "description": "Integrating entrepreneurial thinking into the Haas student experience, and assisting Haas and UC Berkeley students in launching new ventures"
+  "description": "The Promises And Perils Of Designing With Data.\nToday’s most pressing challenges cut across disciplinary boundaries, requiring thoughtful new approaches."
 }
