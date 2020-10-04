@@ -11,12 +11,16 @@ import {
   Checkbox,
 } from "theme-ui"
 import Chip from "../components/chip"
-import Toggle from "../components/toggle"
+// import Toggle from "../components/toggle"
 import { useState, useEffect } from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import PageTitle from "../components/page_title"
 import Layout from "../components/layout"
 import PropTypes from "prop-types"
+
+import './toggle.css'
+
+import Toggle from 'react-toggle'
 
 const possibleTags = [
   "Mentoring",
@@ -74,9 +78,21 @@ export default function ResourcesPage() {
 
   return (
     <Layout>
-      <Toggle></Toggle>
-
       <PageTitle>Directory</PageTitle>
+      <Label sx={{paddingBottom: "20px"}}>
+        <Toggle 
+          defaultChecked={true}
+          onChange={()=>toggleTag("Curated")}
+          icons={false}
+          />
+        {
+        activeTags.includes("Curated") 
+          ? <span sx={{paddingLeft: "15px"}}>Curated</span>
+          : <span sx={{paddingLeft: "15px"}}>Uncurated</span>
+        }
+
+      </Label>
+
       <Input
         placeholder="Search"
         sx={{ mb: 3 }}
