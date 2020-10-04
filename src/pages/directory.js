@@ -11,6 +11,7 @@ import {
   Checkbox,
 } from "theme-ui"
 import Chip from "../components/chip"
+import Toggle from "../components/toggle"
 import { useState, useEffect } from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import PageTitle from "../components/page_title"
@@ -73,10 +74,7 @@ export default function ResourcesPage() {
 
   return (
     <Layout>
-      <Label>
-        <Checkbox onClick={() => toggleTag("Curated")} defaultChecked={true} />
-        Curated
-      </Label>
+      <Toggle></Toggle>
 
       <PageTitle>Directory</PageTitle>
       <Input
