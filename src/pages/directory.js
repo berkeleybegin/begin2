@@ -9,7 +9,7 @@ import PropTypes from "prop-types"
 
 const possibleTags = [
   "Mentoring",
-  "Education & Awareness",
+  "Education and Awareness",
   "Funding & Grants",
   "Networks",
   "Student Groups",
@@ -17,22 +17,22 @@ const possibleTags = [
   "Competitions",
   "Accelerators & Incubators",
   "Training & Support",
-  "New Venture Education"
+  "New Venture Education",
 ]
 
 export default function ResourcesPage() {
   const allResources = useStaticQuery(graphql`
-  query resourcesQuery {
-    allIrdJson(sort: {fields: title, order: ASC}) {
-      nodes {
-        description
-        title
-        url
-        tags
-        id
+    query resourcesQuery {
+      allIrdJson(sort: { fields: title, order: ASC }) {
+        nodes {
+          description
+          title
+          url
+          tags
+          id
+        }
       }
     }
-  }  
   `).allIrdJson.nodes
 
   const [resources, setResources] = useState(allResources)
