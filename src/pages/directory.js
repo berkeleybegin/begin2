@@ -7,33 +7,25 @@ import PageTitle from "../components/page_title"
 import Layout from "../components/layout"
 import PropTypes from "prop-types"
 
-const possibleTags = [
-  "Mentoring",
-  "Education and Awareness",
-  "Funding & Grants",
-  "Networks",
-  "Student Groups",
-  "Fellowships & Scholarships",
-  "Competitions",
-  "Accelerators & Incubators",
-  "Training & Support",
-  "New Venture Education",
-]
 
-export default function ResourcesPage() {
-  const allResources = useStaticQuery(graphql`
-    query resourcesQuery {
-      allIrdJson(sort: { fields: title, order: ASC }) {
-        nodes {
-          description
-          title
-          url
-          tags
-          id
-        }
-      }
+export const query = graphql`
+query resourcesQuery {
+  allIrdJson(sort: {fields: title, order: ASC}) {
+    nodes {
+      description
+      title
+      url
+      tags
+      id
     }
-  `).allIrdJson.nodes
+    distinct(field: tags)
+  }
+}  
+`
+
+export default function ResourcesPage({data}) {
+  const allResources = data.allIrdJson.nodes
+  const possibleTags = data.allIrdJson.distinct
 
   const [resources, setResources] = useState(allResources)
   const [activeTags, setActiveTags] = useState([])
@@ -52,7 +44,7 @@ export default function ResourcesPage() {
       allResources.filter(
         (resource) =>
           (activeTags.length === 0 ||
-            activeTags.every((tag) => resource.tags.includes(tag))) &&
+            activeTags.some((tag) => resource.tags.includes(tag))) &&
           (!searchValue ||
             resource.title.toLowerCase().includes(searchValue.toLowerCase()))
       )
