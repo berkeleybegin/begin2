@@ -17,6 +17,7 @@ query resourcesQuery {
       url
       tags
       id
+      image
     }
     distinct(field: tags)
   }
@@ -106,17 +107,14 @@ function ResourceCard({ resource, placeholderImage}) {
   return (
     <Flex sx={{alignItems: "stretch", mb: 4}}>
         <Image
-          src={placeholderImage}
+          src={resource.image || placeholderImage}
           sx= {{
             flexGrow: "1", 
             verticalAlign: "middle", 
-            // border: "1px solid grey",
             borderRadius: "4px",
             boxShadow: "0 0 4px rgba(0,0,0,.125)",
             marginRight: "7px"
           }}
-          
-          // sx = {{paddingRight: "20px"}}
         />
     <Card
       sx={{
