@@ -3,6 +3,7 @@ import { jsx, Heading, Text } from "theme-ui"
 import PageTitle from "../components/page_title"
 import Layout from "../components/layout"
 import PropTypes from "prop-types"
+import "./index.css"
 
 function Paragraph({ children }) {
   return (
@@ -23,6 +24,7 @@ Paragraph.propTypes = {
 export default function HomePage() {
   return (
     <Layout>
+      <link rel="stylesheet" href="https://use.typekit.net/gom7rch.css"></link>
       <PageTitle>Berkeley Gateway to Innovation</PageTitle>
       <Heading>Why Berkeley?</Heading>
       <Paragraph>

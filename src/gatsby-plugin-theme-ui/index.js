@@ -7,6 +7,7 @@ export default {
     background: "#f7f7f7",
     primary: "#003262",
     secondary: "#3B7EA1",
+    contrast: "#C4820E",
     accent: "#FDB515",
     highlight: "rgba(0, 176, 218, 0.1)",
     muted: "#F2EFEA",
@@ -21,8 +22,8 @@ export default {
   },
   space: [0, 4, 8, 16, 32, 64, 128, 256],
   fonts: {
-    body: "freight-sans-pro, Open Sans, system-ui, sans-serif",
-    heading: "freight-micro-pro, Verdana, system-ui, sans-serif",
+    body: "freight-sans-pro, sans-serif",
+    heading: "freight-micro-pro, serif",
     monospace: "Menlo, monospace",
   },
   fontWeights: {
@@ -64,7 +65,7 @@ export default {
     },
     pageTitle: {
       variant: "text.heading",
-      color: "primary",
+      color: "contrast",
       fontSize: [3, 4],
       mb: 4,
     },
@@ -89,21 +90,24 @@ export default {
       width: "100%",
       p: 2,
       my: 2,
-      color: "inherit",
+      color: "primary",
       textDecoration: "none",
       fontSize: 0,
       fontWeight: "bold",
+      fontFamily: "body",
       bg: "transparent",
       transitionProperty: "background-color",
       transitionTimingFunction: "ease-out",
       transitionDuration: ".2s",
       borderRadius: "default",
       "&:hover": {
-        bg: "highlight",
+        color: "secondary",
+        transition: "0.2s ease-in-out"
+        // bg: "highlight",
       },
       "&.active": {
-        color: "primary",
-        bg: "highlight",
+        color: "contrast",
+        // bg: "highlight",
       },
     },
   },
@@ -135,6 +139,9 @@ export default {
       mb: 2,
       fontFamily: "body",
       fontWeight: 700,
+      "&:hover": {
+        bg: "rgba(6, 94, 175, 0.1)",
+      },
       "&.active": {
         bg: "primary",
         color: "white",
@@ -144,6 +151,7 @@ export default {
   forms: {
     input: {
       fontFamily: "body",
+      borderColor: "#C4C4C4",
     },
     select: {
       fontFamily: "body",

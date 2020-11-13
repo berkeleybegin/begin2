@@ -55,18 +55,20 @@ export default function ResourcesPage({data}) {
 
   return (
     <Layout>
+      <Flex sx={{justifyContent: "space-between", marginBottom: "0px"}}>
       <PageTitle>Directory</PageTitle>
       <Input
         placeholder="Search"
-        sx={{ mb: 3 }}
+        sx={{ mb: 5, width: "50%"}}
         value={searchValue}
         onChange={(event) => {
           setSearchValue(event.target.value)
         }}
       />
-      <Heading sx={{ mb: 2 }} variant="subtitle">
+      </Flex>
+      {/* <Heading sx={{ mb: 2 }} variant="subtitle">
         Types:
-      </Heading>
+      </Heading> */}
       <Flex sx={{ flexWrap: "wrap", mb: 4 }} columns={4}>
         {possibleTags.map((tag) => (
           <Chip
@@ -79,9 +81,11 @@ export default function ResourcesPage({data}) {
           </Chip>
         ))}
       </Flex>
+      <Flex sx={{flexWrap: 'wrap', flexBasis: '50%'}}>
       {resources.map((resource) => (
         <ResourceCard key={resource.id} resource={resource} />
       ))}
+      </Flex>
     </Layout>
   )
 }
