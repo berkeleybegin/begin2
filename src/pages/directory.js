@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { jsx, Card, Heading, Text, Link, Input, Flex } from "theme-ui"
+import { jsx, Card, Heading, Text, Link, Input, Flex, Image} from "theme-ui"
 import Chip from "../components/chip"
 import { useState, useEffect } from "react"
 import { useStaticQuery, graphql } from "gatsby"
@@ -20,12 +20,24 @@ query resourcesQuery {
     }
     distinct(field: tags)
   }
+
+  allImageSharp(
+    filter: { fluid: { originalName: { eq: "resource_placeholder.png" } } }
+  ) {
+    nodes {
+      fluid {
+        src
+      }
+    }
+  }
 }  
 `
 
 export default function ResourcesPage({data}) {
   const allResources = data.allIrdJson.nodes
   const possibleTags = data.allIrdJson.distinct
+
+  const placeholderImage = data.allImageSharp.nodes[0].fluid.src;
 
   const [resources, setResources] = useState(allResources)
   const [activeTags, setActiveTags] = useState([])
@@ -83,25 +95,44 @@ export default function ResourcesPage({data}) {
       </Flex>
       <Flex sx={{flexWrap: 'wrap', flexBasis: '50%'}}>
       {resources.map((resource) => (
-        <ResourceCard key={resource.id} resource={resource} />
+        <ResourceCard key={resource.id} resource={resource} placeholderImage={placeholderImage}/>
       ))}
       </Flex>
     </Layout>
   )
 }
 
-function ResourceCard({ resource }) {
+function ResourceCard({ resource, placeholderImage}) {
   return (
+    <Flex sx={{alignItems: "stretch", mb: 4}}>
+        <Image
+          src={placeholderImage}
+          sx= {{
+            flexGrow: "1", 
+            verticalAlign: "middle", 
+            // border: "1px solid grey",
+            borderRadius: "4px",
+            boxShadow: "0 0 4px rgba(0,0,0,.125)",
+            marginRight: "7px"
+          }}
+          
+          // sx = {{paddingRight: "20px"}}
+        />
     <Card
       sx={{
         mb: 4,
+        marginBottom: 0,
+        width: "65%",
+        flexGrow: 3,
+        height: "9em"
       }}
     >
-      <Heading variant="cardTitle">
-        <Link href={resource.url}>{resource.title}</Link>
-      </Heading>
-      <Text>{resource.description}</Text>
+          <Heading variant="cardTitle">
+            <Link href={resource.url}>{resource.title}</Link>
+          </Heading>
+          <Text>{resource.description}</Text>
     </Card>
+    </Flex>
   )
 }
 ResourceCard.propTypes = {
