@@ -113,7 +113,8 @@ function ResourceCard({ resource, placeholderImage}) {
             verticalAlign: "middle", 
             borderRadius: "4px",
             boxShadow: "0 0 4px rgba(0,0,0,.125)",
-            marginRight: "7px"
+            marginRight: "7px",
+            bg: "#C4C4C4",
           }}
         />
     <Card
