@@ -68,7 +68,7 @@ const sourceCourses = (event, _context, callback) => {
                   number: course.displayName,
                   title: course.title,
                   description: course.description,
-                  units: course.credit.value.fixed.units,
+                  units: course.credit.value.fixed!==null ? course.credit.value.fixed.units : 0,
                   department: course.subjectArea.description,
                 })
               ),
