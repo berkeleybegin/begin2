@@ -71,6 +71,7 @@ export default {
     },
     cardTitle: {
       variant: "text.heading",
+      color: "primary",
       fontSize: [1, 2],
     },
     subtitle: {

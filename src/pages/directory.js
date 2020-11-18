@@ -68,11 +68,22 @@ export default function ResourcesPage({data}) {
 
   return (
     <Layout>
-      <Flex sx={{justifyContent: "space-between", marginBottom: "0px"}}>
+      <Flex sx={{
+        justifyContent: "space-between", 
+        marginBottom: "0px",
+        '@media screen and (max-width: 600px)': {
+          flexDirection: "column",
+        }}}>
       <PageTitle>Directory</PageTitle>
       <Input
         placeholder="Search"
-        sx={{ mb: 5, width: "50%"}}
+        sx={{ 
+          mb: 5, 
+          width: "50%",
+          '@media screen and (max-width: 600px)': {
+            width: "100%",
+          }
+        }}
         value={searchValue}
         onChange={(event) => {
           setSearchValue(event.target.value)
@@ -105,7 +116,11 @@ export default function ResourcesPage({data}) {
 
 function ResourceCard({ resource, placeholderImage}) {
   return (
-    <Flex sx={{alignItems: "stretch", mb: 4}}>
+    <Flex sx={{
+      alignItems: "stretch", 
+      mb: 4,
+
+    }}>
         <Image
           src={resource.image || placeholderImage}
           sx= {{
@@ -115,6 +130,9 @@ function ResourceCard({ resource, placeholderImage}) {
             boxShadow: "0 0 4px rgba(0,0,0,.125)",
             marginRight: "7px",
             bg: "#C4C4C4",
+            '@media screen and (max-width: 600px)': {
+              display: "none",
+            }
           }}
         />
     <Card
@@ -123,7 +141,10 @@ function ResourceCard({ resource, placeholderImage}) {
         marginBottom: 0,
         width: "65%",
         flexGrow: 3,
-        height: "9em"
+        height: "9em",
+        '@media screen and (max-width: 600px)': {
+          height: "auto",
+        }
       }}
     >
           <Heading variant="cardTitle">

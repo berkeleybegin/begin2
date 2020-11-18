@@ -60,18 +60,20 @@ export default function CoursesPage({ data }) {
 
   return (
     <Layout>
+      <Flex sx={{justifyContent: "space-between", marginBottom: "0px"}}>
       <PageTitle>Courses</PageTitle>
       <Input
         placeholder="Search"
-        sx={{ mb: 3 }}
+        sx={{ mb: 5, width: "50%"}}
         value={searchValue}
         onChange={(event) => {
           setSearchValue(event.target.value)
         }}
       />
-      <Heading sx={{ mb: 2 }} variant="subtitle">
+      </Flex>
+      {/* <Heading sx={{ mb: 2 }} variant="subtitle">
         Departments:
-      </Heading>
+      </Heading> */}
       <Flex sx={{ flexWrap: "wrap", mb: 4 }} columns={4}>
         {possibleTags.map((tag) => (
           <Chip
