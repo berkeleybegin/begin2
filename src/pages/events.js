@@ -68,7 +68,7 @@ function EventCard({ isClosest, event }) {
         />
       ) : null} */}
       <Heading variant="cardTitle" sx={{ mt: isClosest ? 3 : "inherit" }}>
-        <Link href={event.url}>{event.title}</Link>
+        <Link href={event.url} target="_blank">{event.title}</Link>
       </Heading>
       <Flex
         sx={{

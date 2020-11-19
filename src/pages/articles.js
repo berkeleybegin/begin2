@@ -144,7 +144,7 @@ function ArticleCard({ article, inSlider }) {
       }}
     >
       <Heading variant="cardTitle">
-        <Link href={article.url}>{article.title}</Link>
+        <Link href={article.url} target="_blank">{article.title}</Link>
       </Heading>
       <Flex
         sx={{

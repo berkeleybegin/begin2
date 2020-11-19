@@ -148,7 +148,7 @@ function ResourceCard({ resource, placeholderImage}) {
       }}
     >
           <Heading variant="cardTitle">
-            <Link href={resource.url}>{resource.title}</Link>
+            <Link href={resource.url} target="_blank">{resource.title}</Link>
           </Heading>
           <Text>{resource.description}</Text>
     </Card>
