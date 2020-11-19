@@ -24,8 +24,11 @@ export const query = graphql`
 `
 
 export default function EventsPage({ data }) {
-  const allEvents = data.allFbJson.nodes
-  const closestEvent = allEvents[0]
+  const allEventsFb = data.allFbJson.nodes
+
+  const allEvents = allEventsFb.filter((event)=>(moment(event.date).diff(moment(), 'days')>0));
+  const closestEvent = allEvents[0];
+  console.log(allEvents.length)
   return (
     <Layout>
       <PageTitle>Events</PageTitle>
@@ -33,15 +36,15 @@ export default function EventsPage({ data }) {
         <Heading as="h3">No events at the moment!</Heading>
       ) : (
         <div>
-          <Heading sx={{ mb: 3 }}>Closest Deadline:</Heading>
+          <Heading sx={{ mb: 3 }}>Closest Deadline</Heading>
           <EventCard isClosest event={closestEvent} />
-          <Heading sx={{ mb: 3 }}>Upcoming:</Heading>
+          <Heading sx={{ mb: 3 }}>Upcoming</Heading>
           {allEvents.length === 1 ? (
             <Heading as="h3">No other events at the moment!</Heading>
           ) : (
             allEvents
               .slice(1)
-              .map((event) => <EventCard key={event.id} event={event} />)
+          .map((event) => <EventCard key={event.id} event={event} />)
           )}
         </div>
       )}
@@ -53,6 +56,7 @@ EventsPage.propTypes = {
 }
 
 function EventCard({ isClosest, event }) {
+  const now = Date();
   return (
     <Card
       key={event.id}
@@ -61,12 +65,6 @@ function EventCard({ isClosest, event }) {
         boxShadow: isClosest ? "large" : "small",
       }}
     >
-      {/* {isClosest ? (
-        <AspectImage
-          ratio={16 / 9}
-          // src={event.image || placeholderImage}
-        />
-      ) : null} */}
       <Heading variant="cardTitle" sx={{ mt: isClosest ? 3 : "inherit" }}>
         <Link href={event.url} target="_blank">{event.title}</Link>
       </Heading>
@@ -76,7 +74,7 @@ function EventCard({ isClosest, event }) {
         }}
       >
         <Text sx={{ mr: 2 }}>
-          Due <div sx={{fontWeight: 600, display: "inline"}}> {moment(event.date).format('MMM D, YYYY')} </div>| In {moment(event.date).subtract(moment()).format('D')} Days
+          Due <div sx={{fontWeight: 600, display: "inline"}}> {moment(event.date).format('MMM D, YYYY')} </div>| In {moment(event.date).diff(moment(), 'days')} Days
         </Text>
         {/* <Text sx={{paddingRight: '10px'}}>At {event.location}</Text> */}
       </Flex>
