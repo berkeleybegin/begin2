@@ -22,6 +22,7 @@ export const query = graphql`
         id
         title
         url
+        curated
         feedKey
       }
     }
@@ -36,16 +37,14 @@ export const query = graphql`
 
 export default function ArticlesPage({ data }) {
   const allArticles = data.allRssJson.nodes
-  const allWeekArticles = allArticles.filter((article) =>
-    moment(article.date).isSame(moment(), "month")
+  const allCuratedArticles = allArticles.filter(
+    (article) => article.curated === true
   )
-  const allMonthArticles = allArticles.filter(
-    (article) =>
-      moment(article.date).isSame(moment(), "year") &&
-      !moment(article.date).isSame(moment(), "month")
-  )
-  const [weekArticles, setWeekArticles] = useState(allWeekArticles)
-  const [monthArticles, setMonthArticles] = useState(allMonthArticles)
+
+  console.log(allCuratedArticles)
+
+  const [curatedArticles, setCuratedArticles] = useState(allCuratedArticles)
+  const [articles, setArticles] = useState(allArticles)
   const [activeTags, setActiveTags] = useState([])
 
   const feedKeysToPossibleTags = {}
@@ -62,18 +61,17 @@ export default function ArticlesPage({ data }) {
   }
 
   function filterArticles() {
-    setWeekArticles(
-      allWeekArticles.filter(
+    setCuratedArticles(
+      allCuratedArticles.filter(
         (article) =>
-          moment(article.date).isSame(moment(), "month") &&
+          article.curated &&
           (activeTags.length === 0 || activeTags.includes(article.feedKey))
       )
     )
-    setMonthArticles(
-      allMonthArticles.filter(
+    setArticles(
+      allArticles.filter(
         (article) =>
           moment(article.date).isSame(moment(), "year") &&
-          !moment(article.date).isSame(moment(), "month") &&
           (activeTags.length === 0 || activeTags.includes(article.feedKey))
       )
     )
@@ -99,8 +97,8 @@ export default function ArticlesPage({ data }) {
           </Chip>
         ))}
       </Flex>
-      <Heading sx={{ mb: 3 }}>This Month:</Heading>
-      {weekArticles.length > 0 ? (
+      <Heading sx={{ mb: 3 }}>Curated</Heading>
+      {curatedArticles.length > 0 ? (
         <Slider
           dots={true}
           infinite={true}
@@ -111,7 +109,7 @@ export default function ArticlesPage({ data }) {
           prevArrow={<ArticleSliderArrow />}
           nextArrow={<ArticleSliderArrow isNext />}
         >
-          {weekArticles.map((article) => (
+          {curatedArticles.map((article) => (
             <ArticleCard key={article.id} article={article} inSlider />
           ))}
         </Slider>
@@ -119,8 +117,8 @@ export default function ArticlesPage({ data }) {
         <Heading as="h3">No articles this month!</Heading>
       )}
       <Heading sx={{ mt: 5, mb: 3 }}>This Year:</Heading>
-      {monthArticles.length > 0 ? (
-        monthArticles.map((article) => (
+      {articles.length > 0 ? (
+        articles.map((article) => (
           <ArticleCard key={article.id} article={article} />
         ))
       ) : (
@@ -144,7 +142,9 @@ function ArticleCard({ article, inSlider }) {
       }}
     >
       <Heading variant="cardTitle">
-        <Link href={article.url} target="_blank">{article.title}</Link>
+        <Link href={article.url} target="_blank">
+          {article.title}
+        </Link>
       </Heading>
       <Flex
         sx={{
