@@ -1,1 +1,11 @@
-{"templateKey":"rss-post","id":"710ea7bb795e17e8254dd1410a144ac8a1609fa2","feedKey":"blum","title":"April 2020","url":"http://blumcenter.berkeley.edu/?p=15627","author":"Nathan Muldrow","excerpt":"The post April 2020 appeared first on Blum Center.","date":"2020-04-17"}
+{
+  "excerpt": "The post April 2020 appeared first on Blum Center.",
+  "feedKey": "blum",
+  "templateKey": "rss-post",
+  "author": "Nathan Muldrow",
+  "date": "2020-04-17",
+  "url": "http://blumcenter.berkeley.edu/?p=15627",
+  "curated": true,
+  "title": "April 2020",
+  "id": "710ea7bb795e17e8254dd1410a144ac8a1609fa2"
+}
