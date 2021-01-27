@@ -28,6 +28,7 @@ collections:
       - { label: "Author", name: "author", widget: "string" }
       - { label: "Excerpt", name: "excerpt", widget: "markdown" }
       - { label: "Date", name: "date", widget: "datetime" }
+      - { label: "Curated", name: "curated", widget: "boolean", required: false}
 
   - name: "rssConfigs"
     label: "RSS Configs"
