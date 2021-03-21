@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { jsx, Card, Heading, Text, Link, Flex, AspectImage } from "theme-ui"
+import { jsx, Card, Heading, Text, Link, Flex, Image } from "theme-ui"
 import { graphql } from "gatsby"
 import moment from "moment"
 import PageTitle from "../components/page_title"
@@ -83,11 +83,17 @@ function OpportunityCard({ isClosest, opportunity, placeholderImage }) {
         boxShadow: isClosest ? "large" : "small",
       }}
     >
-      {isClosest ? (
-        <AspectImage
-          ratio={16 / 9}
-          src={opportunity.image || placeholderImage}
-        />
+      {(isClosest && opportunity.image) ? (
+        <Image
+        src={opportunity.image}
+        sx={{
+          borderRadius: "10px",
+          opacity: "90%",
+          maxHeight: "300px",
+          objectFit: "cover",
+          width: "100%",
+        }}
+      />
       ) : null}
       <Heading variant="cardTitle" sx={{ mt: isClosest ? 3 : "inherit" }}>
         <Link href={opportunity.url} target="_blank">{opportunity.title}</Link>
