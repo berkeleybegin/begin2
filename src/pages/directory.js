@@ -129,7 +129,9 @@ function ResourceCard({ resource, placeholderImage}) {
             borderRadius: "4px",
             boxShadow: "0 0 4px rgba(0,0,0,.125)",
             marginRight: "7px",
+            maxWidth: "150px",
             bg: "#C4C4C4",
+            aspectRatio: "1/1",
             '@media screen and (max-width: 600px)': {
               display: "none",
             }
