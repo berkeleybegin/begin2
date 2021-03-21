@@ -115,7 +115,7 @@ export default function ResourcesPage({data}) {
 }
 
 function ResourceCard({ resource, placeholderImage}) {
-  const shadow = (resource.image) ? "" : "#C4C4C4";
+  const shadow = (resource.image) ? "white" : "#C4C4C4";
 
   return (
     <Flex sx={{
@@ -133,6 +133,7 @@ function ResourceCard({ resource, placeholderImage}) {
             marginRight: "7px",
             maxWidth: "150px",
             maxHeight: "9em",
+            objectFit: "fill",
             bg: shadow,
             aspectRatio: "1/1",
             '@media screen and (max-width: 600px)': {
