@@ -140,8 +140,6 @@ ArticlesPage.propTypes = {
 }
 
 function ArticleCard({ article, inSlider }) {
-  console.log(article.image)
-
   return (
     <Card
       sx={{
