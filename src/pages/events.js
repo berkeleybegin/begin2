@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { jsx, Card, Heading, Text, Link, Flex, Divider } from "theme-ui"
+import { jsx, Card, Heading, Text, Link, Flex, Divider, Image } from "theme-ui"
 import { graphql } from "gatsby"
 import moment from "moment"
 import PageTitle from "../components/page_title"
@@ -18,6 +18,7 @@ export const query = graphql`
         page
         title
         url
+        image
       }
     }
   }
@@ -65,6 +66,18 @@ function EventCard({ isClosest, event }) {
         boxShadow: isClosest ? "large" : "small",
       }}
     >
+      {isClosest && event.image !== null && (
+        <Image
+          src={event.image}
+          sx={{
+            borderRadius: "10px",
+            opacity: "90%",
+            maxHeight: "300px",
+            objectFit: "cover",
+            width: "100%",
+          }}
+        />
+      )}
       <Heading variant="cardTitle" sx={{ mt: isClosest ? 3 : "inherit" }}>
         <Link href={event.url} target="_blank">{event.title}</Link>
       </Heading>
