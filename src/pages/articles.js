@@ -151,7 +151,18 @@ function ArticleCard({ article, inSlider }) {
         mt: inSlider ? 1 : "inherit",
       }}
     >
-      {article.image !== null && <Image src={article.image} />}
+      {article.image !== null && (
+        <Image
+          src={article.image}
+          sx={{
+            borderRadius: "10px",
+            opacity: "90%",
+            maxHeight: "300px",
+            objectFit: "cover",
+            width: "100%",
+          }}
+        />
+      )}
       <Heading variant="cardTitle">
         <Link href={article.url} target="_blank">
           {article.title}
