@@ -1,5 +1,14 @@
 /** @jsx jsx */
-import { jsx, Card, Heading, Text, Link, Flex, IconButton } from "theme-ui"
+import {
+  jsx,
+  Card,
+  Heading,
+  Text,
+  Link,
+  Flex,
+  IconButton,
+  Image,
+} from "theme-ui"
 import { useState, useEffect } from "react"
 import Chip from "../components/chip"
 import { graphql } from "gatsby"
@@ -24,6 +33,7 @@ export const query = graphql`
         url
         curated
         feedKey
+        image
       }
     }
     allRssConfigsJson {
@@ -40,8 +50,6 @@ export default function ArticlesPage({ data }) {
   const allCuratedArticles = allArticles.filter(
     (article) => article.curated === true
   )
-
-  console.log(allCuratedArticles)
 
   const [curatedArticles, setCuratedArticles] = useState(allCuratedArticles)
   const [articles, setArticles] = useState(allArticles)
@@ -132,6 +140,8 @@ ArticlesPage.propTypes = {
 }
 
 function ArticleCard({ article, inSlider }) {
+  console.log(article.image)
+
   return (
     <Card
       sx={{
@@ -141,6 +151,7 @@ function ArticleCard({ article, inSlider }) {
         mt: inSlider ? 1 : "inherit",
       }}
     >
+      {article.image !== null && <Image src={article.image} />}
       <Heading variant="cardTitle">
         <Link href={article.url} target="_blank">
           {article.title}
