@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { jsx, Container, Flex, Box, Styled, MenuButton, Image } from "theme-ui"
+import { jsx, Container, Flex, Box, Styled, MenuButton, Image, Link } from "theme-ui"
 import { Sidenav } from "@theme-ui/sidenav"
 import NavLink from "./nav_link"
 import { useState, useRef } from "react"
@@ -51,7 +51,7 @@ const Layout = ({ children }) => {
         }}
         as="header"
       >
-        <MenuButton
+        {/* <MenuButton
           sx={{ display: [null, "none"], mr: 3 }}
           onClick={() => {
             setSidebarOpen(!sidebarOpen)
@@ -59,13 +59,37 @@ const Layout = ({ children }) => {
             const navLink = nav.current.querySelector("a")
             if (navLink) navLink.focus()
           }}
-        />
+        /> */}
         <Image sx={{ height: "32px", mr: 3 }} src={logoGraphic} />
         <Image sx={{ height: "32px", mt: 2 }} src={logoText} />
+
+            <Flex
+              sx={{
+                // display: [null, "block"],
+                // width: 256,
+                display: 'flex',
+                flexDirection: "row",
+                justifyContent: 'right',
+                marginLeft: 'auto',
+                // margin: 'auto',
+                // width: 'auto',
+                top: [3, 4],
+                pl: [3, 4],
+                pr: 2,
+                mt: [64, 0],
+              }}>
+                <NavLink href="/">Home</NavLink>
+                <NavLink href="/opportunities">Opportunities</NavLink>
+                <NavLink href="/events">Events</NavLink>
+                <NavLink href="/articles">News</NavLink>
+                <NavLink href="/directory">Directory</NavLink>
+                <NavLink href="/courses">Courses</NavLink>
+                <NavLink href="/contact">Contact</NavLink>
+              </Flex>
       </Flex>
       <Flex
         sx={{
-          flexDirection: "column",
+          flexDirection: "row",
           minHeight: "100vh",
         }}
       >
@@ -75,36 +99,6 @@ const Layout = ({ children }) => {
             display: ["block", "flex"],
           }}
         >
-          <div
-            ref={nav}
-            role="navigation"
-            onBlur={() => {
-              setSidebarOpen(false)
-            }}
-            onClick={() => {
-              setSidebarOpen(false)
-            }}
-            onKeyPress={() => {
-              setSidebarOpen(false)
-            }}
-          >
-            <Sidebar
-              open={sidebarOpen}
-              components={{
-                wrapper: Sidenav,
-                a: NavLink,
-              }}
-              sx={{
-                display: [null, "block"],
-                width: 256,
-                flex: "none",
-                top: [3, 4],
-                pl: [3, 4],
-                pr: 2,
-                mt: [64, 0],
-              }}
-            />
-          </div>
           <Container
             sx={{
               p: 3,
