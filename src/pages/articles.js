@@ -149,7 +149,7 @@ function ArticleCard({ article, inSlider }) {
         mt: inSlider ? 1 : "inherit",
       }}
     >
-      {article.image !== null && (
+      {inSlider && article.image !== null && (
         <Image
           src={article.image}
           sx={{
@@ -161,7 +161,7 @@ function ArticleCard({ article, inSlider }) {
           }}
         />
       )}
-      <Heading variant="cardTitle">
+      <Heading variant="cardTitle" sx={{ mt: inSlider ? 3 : "inherit" }}>
         <Link href={article.url} target="_blank">
           {article.title}
         </Link>
