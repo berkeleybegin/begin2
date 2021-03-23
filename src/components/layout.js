@@ -60,8 +60,10 @@ const Layout = ({ children }) => {
             if (navLink) navLink.focus()
           }}
         /> */}
-        <Image sx={{ height: "32px", mr: 3 }} src={logoGraphic} />
-        <Image sx={{ height: "32px", mt: 2 }} src={logoText} />
+        <Link href="/" sx={{margin: 0, padding:0}}>
+          <Image sx={{ height: "32px", mr: 3 }} src={logoGraphic} />
+          <Image sx={{ height: "32px", mt: 2 }} src={logoText} />
+        </Link>
 
             <Flex
               sx={{
