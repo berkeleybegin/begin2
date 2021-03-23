@@ -71,6 +71,8 @@ const sourceRSS = (event, _context, callback) => {
             })
           })
 
+          console.log(filesToPush);
+
           gh.pushFiles(
             `RSS content push on ${moment().format("YYYY-MM-DD")}`,
             filesToPush
