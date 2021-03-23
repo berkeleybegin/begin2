@@ -21,7 +21,7 @@
     "gatsby-source-filesystem": "^2.3.24",
     "gatsby-transformer-json": "^2.4.11",
     "gatsby-transformer-sharp": "^2.5.13",
-    "github-api": "^3.3.0",
+    "github-api": "^3.4.0",
     "jsonwebtoken": "^8.5.1",
     "lodash": "^4.17.20",
     "moment": "^2.27.0",
