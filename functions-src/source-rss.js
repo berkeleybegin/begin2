@@ -23,7 +23,9 @@ const sourceRSS = (event, _context, callback) => {
   // const token = event.headers.authorization.replace(/Bearer/i, "").trim()
   // jwt.verify(token, process.env.JWT_SECRET, error => {
     // if (!error) {
-      gh.init()
+    console.log("entry");  
+    
+    gh.init()
         .then(() => {
           return gh.getConfigs("rss")
         })
