@@ -1,9 +1,9 @@
 {
   "templateKey": "opportunity",
   "date": "2021-03-23T21:06:00.000Z",
-  "title": "Jacobs Project Support",
+  "title": "Jacobs Project Support for Design Prototyping",
   "org": "Jacobs Institute for Design Innovation",
-  "description": "JPS was created to support research, academic, and co-curricular projects with technical fabrication support, virtual design support from our Design Specialists, and pick-up arrangement. JPS offers a variety of fabrication methods, including laser cutting, 3D printing, and most of our other rapid prototyping processes. This is offered campus-wide, with project facilitation prioritized by user tiers. JPS is free to use with the exception of material costs. ",
+  "description": "JPS support provides the Cal maker community with access to technical fabrication technology and virtual design resources for research, academic, and co-curricular projects. JPS offers a variety of fabrication methods, including laser cutting, 3D printing, and other rapid prototyping processes. This service is free, with the exception of material costs.",
   "url": "https://jacobsinstitute.berkeley.edu/jps/",
   "image": "/img/jacobs-logo.png"
 }
