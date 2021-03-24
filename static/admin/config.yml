@@ -77,8 +77,8 @@ collections:
       - { label: "Url", name: "url", widget: "string" }
 
   - name: "irdResources"
-    label: "IRD Resources"
-    label_singular: "IRD Resource"
+    label: "Resources"
+    label_singular: "Resource"
     folder: "src/data/ird"
     create: true
     slug: "ird-{{date}}-{{id}}"
