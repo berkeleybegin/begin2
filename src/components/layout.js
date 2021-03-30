@@ -9,7 +9,7 @@ import PropTypes from "prop-types"
 import Head from "./head"
 import Sidebar from "./sidebar.mdx"
 
-const Layout = ({ children }) => {
+const Layout = (props) => {
   const [sidebarOpen, setSidebarOpen] = useState(false)
   const nav = useRef(null)
 
@@ -79,6 +79,9 @@ const Layout = ({ children }) => {
                 pl: [3, 4],
                 pr: 2,
                 mt: [64, 0],
+                '@media screen and (max-width: 800px)': {
+                    display: 'none',
+                },
               }}>
                 <NavLink href="/">Home</NavLink>
                 <NavLink href="/opportunities">Opportunities</NavLink>
@@ -103,15 +106,15 @@ const Layout = ({ children }) => {
         >
           <Container
             sx={{
-              p: 3,
+              // p: 3,
               width: "100%",
               minWidth: 0,
-              maxWidth: 768,
+              maxWidth: props.padding || 768,
               mx: "auto",
             }}
             as="main"
           >
-            {children}
+            {props.children}
           </Container>
         </Box>
       </Flex>
