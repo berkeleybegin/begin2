@@ -1,9 +1,9 @@
 {
   "templateKey": "opportunity",
-  "date": "2020-09-21T04:00:00.000Z",
-  "title": "Test 3",
-  "url": "https://begin.berkeley.edu",
-  "org": "Test Org 3",
-  "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eu ultricies lectus, dictum volutpat neque. Aenean non aliquet metus, sed ullamcorper enim. Quisque posuere orci lorem. Integer id maximus eros. Praesent lacus tellus, dictum eu aliquam et, semper nec nulla. Quisque id commodo libero. Ut ut massa nisi.",
+  "date": "2021-04-16T04:00:00.000Z",
+  "title": "Technology and National Security Fellowship",
+  "url": "https://www.nsin.us/tnsf/",
+  "org": "National Security Innovation Network",
+  "description": "The Technology and National Security Fellowship is a paid opportunity for technologists and entrepreneurs to serve their country by embedding with key decision makers at the top levels of the U.S. Government. Up to 15 fellows with STEM backgrounds and technical expertise will be selected for a 1-year cohort, August 2021 to August 2022, in the Washington, D.C. area, either at Capitol Hill or the Pentagon. Fellows will provide policy makers and their immediate staff with technical expertise and advice on a variety of critical subject areas. [Apply by April 15](https://airtable.com/shrYcWlpvzO1C2nct).",
   "image": ""
 }

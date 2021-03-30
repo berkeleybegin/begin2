@@ -1,10 +1,10 @@
 {
   "templateKey": "fb-post",
-  "date": "2021-03-29T23:00:00.000Z",
-  "title": "CITRIS People and Robots - Neera Jain",
-  "id": "Z3pNRi9aUEhqWUl1NjY3aUpUU2dwZz09",
-  "url": "https://citris-uc.org/event/cpar-seminar-series-neera-jain/",
-  "page": "CITRIS",
+  "date": "2021-04-19T23:00:18.772Z",
   "description": "CITRIS People and Robots hosts a weekly seminar series every Monday afternoon jointly with UC Berkeley’s “Design of Robotics and Embedded systems, Analysis, and Modeling” Seminars (DREAMS). Seminars are held in room 250 Sutardja Dai Hall on Mondays from 4-5 PM and available online via [webcast](https://www.youtube.com/citris).",
-  "location": "Online"
+  "title": "CPAR Seminar Series – Chinwe Ekenna",
+  "page": "CITRIS",
+  "url": "https://citris-uc.org/event/cpar-seminar-series-chinwe-ekenna/",
+  "id": "-chinwe-ekenna/",
+  "location": "https://berkeley.zoom.us/j/91953129348?pwd=Z3pNRi9aUEhqWUl1NjY3aUpUU2dwZz09"
 }
