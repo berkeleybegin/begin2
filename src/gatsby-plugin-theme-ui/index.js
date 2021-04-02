@@ -23,7 +23,7 @@ export default {
   space: [0, 4, 8, 16, 32, 64, 128, 256],
   fonts: {
     body: "freight-sans-pro, sans-serif",
-    heading: "freight-micro-pro, serif",
+    heading: "Montserrat, serif",
     monospace: "Menlo, monospace",
   },
   fontWeights: {

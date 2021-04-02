@@ -37,22 +37,22 @@ const NumBlock = () => (
     flexWrap: "wrap", flexDirection: "row", alignItems: "center", justifyContent: "space-around", 
     textAlign: "center", bg: "#003262", color: "white", padding: ["50px", "70px"], marginTop: "40px", marginBottom: "40px", width: "100%", '@media screen and (max-width: 700px)': {flexDirection: 'column'}}}
     >
-    <Text sx={{flexBasis: "33%", paddingBottom: "20px"}}> <Text sx={{fontSize: "3em", padding: 0, margin: 0}}>#1</Text>Public University</Text>
-    <Text sx={{flexBasis: "33%", paddingBottom: "20px"}}> <Text sx={{fontSize: "3em", padding: 0, margin: 0}}>#2</Text>University for Entrepreneurs</Text>
-    <Text sx={{flexBasis: "33%", paddingBottom: "20px"}}> <Text sx={{fontSize: "3em", padding: 0, margin: 0, gap: "12px"}}>#4</Text>in Most Successful Founders</Text>
+    <Text sx={{flexBasis: "33%", paddingBottom: "20px"}}> <Heading sx={{fontSize: "3em", padding: 0, margin: 0}}>#1</Heading>Public University</Text>
+    <Text sx={{flexBasis: "33%", paddingBottom: "20px"}}> <Heading sx={{fontSize: "3em", padding: 0, margin: 0}}>#2</Heading>University for Entrepreneurs</Text>
+    <Text sx={{flexBasis: "33%", paddingBottom: "20px"}}> <Heading sx={{fontSize: "3em", padding: 0, margin: 0, gap: "12px"}}>#4</Heading>in Most Successful Founders</Text>
 
-    <Text sx={{flexBasis: "33%", paddingBottom: "20px"}}><Text sx={{fontSize: "3em", padding: 0, margin: 0}}><CountUp end={1652} duration={2}/></Text>Startup Founders</Text>
-    <Text sx={{flexBasis: "33%", paddingBottom: "20px"}}><Text sx={{fontSize: "3em", padding: 0, margin: 0}}><CountUp end={1481} duration={2}/></Text>Startups</Text>
-    <Text sx={{flexBasis: "33%", paddingBottom: "20px"}}><Text sx={{fontSize: "3em", padding: 0, margin: 0}}>$<CountUp end={779.8} duration={2}/>M</Text>in Research Funding</Text>
+    <Text sx={{flexBasis: "33%", paddingBottom: "20px"}}><Heading sx={{fontSize: "3em", padding: 0, margin: 0}}><CountUp end={1652} duration={2}/></Heading>Startup Founders</Text>
+    <Text sx={{flexBasis: "33%", paddingBottom: "20px"}}><Heading sx={{fontSize: "3em", padding: 0, margin: 0}}><CountUp end={1481} duration={2}/></Heading>Startups</Text>
+    <Text sx={{flexBasis: "33%", paddingBottom: "20px"}}><Heading sx={{fontSize: "3em", padding: 0, margin: 0}}>$<CountUp end={779.8} duration={2}/>M</Heading>in Research Funding</Text>
 
-    <Text sx={{flexBasis: "33%", paddingBottom: "10px"}}><Text sx={{fontSize: "3em", padding: 0, margin: 0}}><CountUp end={1649} duration={2}/></Text>Active Inventions</Text>
-    <Text sx={{flexBasis: "33%", paddingBottom: "10px"}}><Text sx={{fontSize: "3em", padding: 0, margin: 0}}><CountUp end={774} duration={2}/></Text>Active Patents</Text>
-    <Text sx={{flexBasis: "33%", paddingBottom: "10px"}}><Text sx={{fontSize: "3em", padding: 0, margin: 0}}><CountUp end={814} duration={2}/></Text>Active Foreign Patents</Text>
+    <Text sx={{flexBasis: "33%", paddingBottom: "10px"}}><Heading sx={{fontSize: "3em", padding: 0, margin: 0}}><CountUp end={1649} duration={2}/></Heading>Active Inventions</Text>
+    <Text sx={{flexBasis: "33%", paddingBottom: "10px"}}><Heading sx={{fontSize: "3em", padding: 0, margin: 0}}><CountUp end={774} duration={2}/></Heading>Active Patents</Text>
+    <Text sx={{flexBasis: "33%", paddingBottom: "10px"}}><Heading sx={{fontSize: "3em", padding: 0, margin: 0}}><CountUp end={814} duration={2}/></Heading>Active Foreign Patents</Text>
   </Flex>
 )
 
 const EntryPage = () => (
-  <Flex sx={{height: "90vh", minHeight: "300px", alignItems: "center", justifyContent: "center", flexDirection: "column", background: `url(${mainImage}) no-repeat center center fixed`, backgroundSize: 'cover', backgroundRepeat: 'no-repeat', objectFit: 'contain'}}>
+  <Flex sx={{height: "100vh", minHeight: "300px", alignItems: "center", justifyContent: "center", flexDirection: "column", background: `url(${mainImage}) no-repeat center center fixed`, backgroundSize: 'cover', backgroundRepeat: 'no-repeat', objectFit: 'contain'}}>
     <Heading sx={{fontSize: "3rem", color: "white", fontWeight: 200}}>Welcome to the</Heading>
     <Heading sx={{fontSize: "3rem", color: "white", fontWeight: 200}}><b>Be</b>rkeley <b>G</b>ateway to <b>In</b>novation</Heading> 
   </Flex> 

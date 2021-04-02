@@ -7,6 +7,8 @@ import PageTitle from "../components/page_title"
 import Layout from "../components/layout"
 import PropTypes from "prop-types"
 
+import "./index.css"
+
 export const query = graphql`
 query CoursesPageQuery {
   allCoursesJson {

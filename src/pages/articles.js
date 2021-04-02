@@ -124,9 +124,9 @@ export default function ArticlesPage({ data }) {
           ))}
         </Slider>
       ) : (
-        <Heading as="h3">No articles this month!</Heading>
+        <Heading as="h3">No articles!</Heading>
       )}
-      <Heading sx={{ mt: 5, mb: 3 }}>This Year:</Heading>
+      <Heading sx={{ mt: 5, mb: 3 }}>This Year</Heading>
       {articles.length > 0 ? (
         articles.map((article) => (
           <ArticleCard key={article.id} article={article} />
@@ -175,7 +175,7 @@ function ArticleCard({ article, inSlider }) {
       >
         <Heading variant="subtitle">By {article.author}</Heading>
         <Text sx={{ mr: 2 }}>
-          Published {moment(article.date).format("MM/DD/YYYY")}
+          {moment(article.date).format("MM/DD/YYYY")}
         </Text>
       </Flex>
       <Text>{article.excerpt}</Text>

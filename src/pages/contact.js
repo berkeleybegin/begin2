@@ -3,6 +3,8 @@ import { jsx, Box, Checkbox, Input, Label, Textarea, Select, Button, Text, Flex 
 import PageTitle from "../components/page_title"
 import Layout from "../components/layout"
 
+import "./index.css"
+
 export default function ContactPage() {
   return (
     <Layout>
