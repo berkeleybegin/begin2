@@ -3,7 +3,7 @@
 import { jsx, Heading, Text, Flex, Image , Link } from "theme-ui"
 import moment from "moment"
 import { StaticQuery, graphql } from "gatsby"
-import Placeholder from "../images/logo_graphic.png"
+import Placeholder from "../images/placeholder.png"
 
 
 const NewsCard = ({data}) => (

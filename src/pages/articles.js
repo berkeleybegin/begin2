@@ -20,6 +20,8 @@ import Slider from "react-slick"
 import "slick-carousel/slick/slick.css"
 import "slick-carousel/slick/slick-theme.css"
 
+import Placeholder from "../images/placeholder.png"
+
 export const query = graphql`
   query rssQuery {
     allRssJson(sort: { fields: date, order: DESC }) {
@@ -149,9 +151,9 @@ function ArticleCard({ article, inSlider }) {
         mt: inSlider ? 1 : "inherit",
       }}
     >
-      {inSlider && article.image !== null && (
+      {inSlider && (
         <Image
-          src={article.image}
+          src={article.image || Placeholder}
           sx={{
             borderRadius: "10px",
             opacity: "90%",
