@@ -13,6 +13,8 @@ import NewsBlock from "../components/newsblock"
 import OppsBlock from "../components/oppsblock"
 import CourseBlock from "../components/coursesblock"
 
+import CountUp from "react-countup"
+
 function Paragraph({ children }) {
   return (
     <Text
@@ -32,20 +34,20 @@ Paragraph.propTypes = {
 const NumBlock = () => (
   <Flex 
   sx={{
-    flexWrap: "wrap", flexDirection: "row", alignItems: "center", justifyContent: "space-between", 
+    flexWrap: "wrap", flexDirection: "row", alignItems: "center", justifyContent: "space-around", 
     textAlign: "center", bg: "#003262", color: "white", padding: ["50px", "70px"], marginTop: "40px", marginBottom: "40px", width: "100%", '@media screen and (max-width: 700px)': {flexDirection: 'column'}}}
     >
-    <Text sx={{flexBasis: "33%", paddingBottom: "20px"}}> <Text sx={{fontSize: "4em", padding: 0, margin: 0}}>#1</Text>Public University</Text>
-    <Text sx={{flexBasis: "33%", paddingBottom: "20px"}}> <Text sx={{fontSize: "4em", padding: 0, margin: 0}}>#2</Text>University for Entrepreneurs</Text>
-    <Text sx={{flexBasis: "33%", paddingBottom: "20px"}}> <Text sx={{fontSize: "4em", padding: 0, margin: 0, gap: "12px"}}>#4</Text>in Most Successful Founders</Text>
+    <Text sx={{flexBasis: "33%", paddingBottom: "20px"}}> <Text sx={{fontSize: "3em", padding: 0, margin: 0}}>#1</Text>Public University</Text>
+    <Text sx={{flexBasis: "33%", paddingBottom: "20px"}}> <Text sx={{fontSize: "3em", padding: 0, margin: 0}}>#2</Text>University for Entrepreneurs</Text>
+    <Text sx={{flexBasis: "33%", paddingBottom: "20px"}}> <Text sx={{fontSize: "3em", padding: 0, margin: 0, gap: "12px"}}>#4</Text>in Most Successful Founders</Text>
 
-    <Text sx={{flexBasis: "33%", paddingBottom: "20px"}}><Text sx={{fontSize: "4em", padding: 0, margin: 0}}>1652</Text>Startup Founders</Text>
-    <Text sx={{flexBasis: "33%", paddingBottom: "20px"}}><Text sx={{fontSize: "4em", padding: 0, margin: 0}}>1481</Text>Startups</Text>
-    <Text sx={{flexBasis: "33%", paddingBottom: "20px"}}><Text sx={{fontSize: "4em", padding: 0, margin: 0}}>$779.8M</Text>in Research Funding</Text>
+    <Text sx={{flexBasis: "33%", paddingBottom: "20px"}}><Text sx={{fontSize: "3em", padding: 0, margin: 0}}><CountUp end={1652} duration={2}/></Text>Startup Founders</Text>
+    <Text sx={{flexBasis: "33%", paddingBottom: "20px"}}><Text sx={{fontSize: "3em", padding: 0, margin: 0}}><CountUp end={1481} duration={2}/></Text>Startups</Text>
+    <Text sx={{flexBasis: "33%", paddingBottom: "20px"}}><Text sx={{fontSize: "3em", padding: 0, margin: 0}}>$<CountUp end={779.8} duration={2}/>M</Text>in Research Funding</Text>
 
-    <Text sx={{flexBasis: "33%", paddingBottom: "10px"}}><Text sx={{fontSize: "4em", padding: 0, margin: 0}}>1649</Text>Active Inventions</Text>
-    <Text sx={{flexBasis: "33%", paddingBottom: "10px"}}><Text sx={{fontSize: "4em", padding: 0, margin: 0}}>774</Text>Active Patents</Text>
-    <Text sx={{flexBasis: "33%", paddingBottom: "10px"}}><Text sx={{fontSize: "4em", padding: 0, margin: 0}}>814</Text>Active Foreign Patents</Text>
+    <Text sx={{flexBasis: "33%", paddingBottom: "10px"}}><Text sx={{fontSize: "3em", padding: 0, margin: 0}}><CountUp end={1649} duration={2}/></Text>Active Inventions</Text>
+    <Text sx={{flexBasis: "33%", paddingBottom: "10px"}}><Text sx={{fontSize: "3em", padding: 0, margin: 0}}><CountUp end={774} duration={2}/></Text>Active Patents</Text>
+    <Text sx={{flexBasis: "33%", paddingBottom: "10px"}}><Text sx={{fontSize: "3em", padding: 0, margin: 0}}><CountUp end={814} duration={2}/></Text>Active Foreign Patents</Text>
   </Flex>
 )
 
