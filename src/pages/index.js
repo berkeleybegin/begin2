@@ -3,9 +3,15 @@ import { jsx, Heading, Text, Flex, Image } from "theme-ui"
 import PageTitle from "../components/page_title"
 import Layout from "../components/layout"
 import PropTypes from "prop-types"
+import { graphql } from "gatsby"
 import "./index.css"
 import mainImage from "../images/begin-hero.png"
 import berkImage from "../images/berkeley.jpg"
+
+import EventBlock from "../components/eventsblock";
+import NewsBlock from "../components/newsblock"
+import OppsBlock from "../components/oppsblock"
+import CourseBlock from "../components/coursesblock"
 
 function Paragraph({ children }) {
   return (
@@ -60,6 +66,7 @@ const WhyBlock = () => (
   </Flex>
 )
 
+
 export default function HomePage() {
   return (
     <Layout padding="10000">
@@ -67,7 +74,10 @@ export default function HomePage() {
       <EntryPage />
       <WhyBlock />
       <NumBlock />
- 
+      <EventBlock />
+      <NewsBlock />
+      <OppsBlock />
+      <CourseBlock />
     </Layout>
   )
 }

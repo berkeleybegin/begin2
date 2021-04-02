@@ -1,0 +1,46 @@
+
+/** @jsx jsx */
+import { jsx, Heading, Text, Flex, Image, Link } from "theme-ui"
+import moment from "moment"
+import { StaticQuery, graphql } from "gatsby"
+
+
+export default function OppsBlock() {
+    return (
+      <StaticQuery
+        query={graphql`
+            query OppsBlockQuery {
+            allOpportunitiesJson(sort: { fields: date, order: ASC }) {
+              nodes {
+                title
+                url
+                org
+                date
+                description
+                id
+                image
+              }
+            }
+          }
+        `}
+        render={data => {
+            const allOppsData = data.allOpportunitiesJson.nodes
+            const allOpps = allOppsData.filter((event)=>(moment(event.date).diff(moment(), 'days')>0));
+            const display = []
+            allOpps.forEach(event => { display.push(
+                    <Flex sx={{flexDirection: "column"}}>
+                        <Text sx={{fontSize: "1.4em", fontWeight: 600}}>{event.title}</Text>
+                        <Text sx={{fontSize: "1.2em", paddingBottom: "10px", fontStyle: "italic"}}>Deadline: {moment(event.date).format("MMMM DD")}</Text>
+                    </Flex>
+                    )})
+            return (
+                <Flex sx={{padding: "40px", marginLeft: "20px", marginRight: "20px", marginBottom: "40px", flexDirection: "column"}}>
+                <Heading sx={{fontSize: "2em", paddingBottom: "20px"}}>Opportunities and Deadlines</Heading>
+                {display}
+                <Link sx={{fontSize: "1.3em", color: "#C4820E", alignItem: "right"}} href="/opportunities">See More Opportunities >></Link>
+                </Flex>
+            );
+        }}
+      />
+    )
+  }
