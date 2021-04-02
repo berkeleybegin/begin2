@@ -7,8 +7,8 @@ import Placeholder from "../images/logo_graphic.png"
 
 
 const NewsCard = ({data}) => (
-    <Flex sx={{flexDirection: "column", padding: "20px", maxWidth: "300px"}}>
-        <Image src={data.image || Placeholder} sx={{width: "300px", height: "280px", boxShadow: "small", marginBottom: "10px"}}/>
+    <Flex sx={{flexDirection: "column", padding: "20px", maxWidth: "330px", alignContent: "center"}}>
+        <Image src={data.image || Placeholder} sx={{width: "330px", height: "280px", boxShadow: "small", marginBottom: "10px", objectFit: "cover", borderRadius: "10px"}}/>
         <Text sx={{fontSize: "1.4em", paddingBottom: "10px"}}>{data.title}</Text>
     </Flex>
 )
