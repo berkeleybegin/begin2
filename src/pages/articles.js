@@ -31,7 +31,6 @@ export const query = graphql`
         id
         title
         url
-        curated
         feedKey
         image
       }
