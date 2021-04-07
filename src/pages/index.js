@@ -5,8 +5,10 @@ import Layout from "../components/layout"
 import PropTypes from "prop-types"
 import { graphql } from "gatsby"
 import "./index.css"
+
 import mainImage from "../images/begin-hero.png"
 import berkImage from "../images/berkeley.jpg"
+import bg from "../images/bg.png"
 
 import EventBlock from "../components/eventsblock";
 import NewsBlock from "../components/newsblock"
@@ -52,9 +54,11 @@ const NumBlock = () => (
 )
 
 const EntryPage = () => (
-  <Flex sx={{height: "100vh", minHeight: "300px", alignItems: "center", justifyContent: "center", flexDirection: "column", background: `url(${mainImage}) no-repeat center center fixed`, backgroundSize: 'cover', backgroundRepeat: 'no-repeat', objectFit: 'contain'}}>
-    <Heading sx={{fontSize: "3rem", color: "white", fontWeight: 200}}>Welcome to the</Heading>
-    <Heading sx={{fontSize: "3rem", color: "white", fontWeight: 200}}><b>Be</b>rkeley <b>G</b>ateway to <b>In</b>novation</Heading> 
+  <Flex sx={{height: "100vh", minHeight: "300px", alignItems: "center", justifyContent: "center", flexDirection: "column", 
+            background: `url(${mainImage}) no-repeat center center fixed`, backgroundSize: 'cover', backgroundRepeat: 'no-repeat', objectFit: 'contain',
+            }}>
+    <Heading sx={{fontSize: "3rem", color: "white", fontWeight: 200, '@media screen and (max-width: 800px)': {marginLeft: "20px"}}}>Welcome to the</Heading>
+    <Heading sx={{fontSize: "3rem", color: "white", fontWeight: 200, '@media screen and (max-width: 800px)': {marginLeft: "20px"}}}><b>Be</b>rkeley <b>G</b>ateway to <b>In</b>novation</Heading> 
   </Flex> 
 )
 
@@ -76,10 +80,12 @@ export default function HomePage() {
       <EntryPage />
       <WhyBlock />
       <NumBlock />
-      <EventBlock />
-      <NewsBlock />
-      <OppsBlock />
-      <CourseBlock />
+      <div sx={{background: `url(${bg}) center center`, backgroundRepeat: "repeat"}}>
+        <EventBlock />
+        <NewsBlock />
+        <OppsBlock />
+        <CourseBlock />
+      </div>
     </Layout>
   )
 }

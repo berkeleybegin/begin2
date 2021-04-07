@@ -7,7 +7,7 @@ import { StaticQuery, graphql } from "gatsby"
 
 export default function CourseBlock() {
     return (
-        <Flex sx={{padding: "40px", marginLeft: "20px", marginRight: "20px", marginBottom: "40px", flexDirection: "column", boxShadow: "large"}}>
+        <Flex sx={{padding: "40px", marginLeft: "20px", marginRight: "20px", marginBottom: "40px", flexDirection: "column"}}>
         <Heading sx={{fontSize: "2em", paddingBottom: "20px"}}>Berkeley Changemaker<sup>TM</sup> Courses</Heading>
 
         <Heading sx={{fontSize: "1.4em", paddingBottom: "20px", fontWeight: 200, fontStyle:  "italic"}}>Not sure where to start? Take one of these introductory courses for all majors.</Heading>

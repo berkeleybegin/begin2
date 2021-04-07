@@ -29,7 +29,7 @@ export default function OppsBlock() {
             const display = []
             allOpps.forEach(event => { display.push(
                     <Flex sx={{flexDirection: "column"}}>
-                        <Text sx={{fontSize: "1.4em", fontWeight: 600}}>{event.title}</Text>
+                        <Link sx={{fontSize: "1.4em", fontWeight: 600}} href={event.url}>{event.title}</Link>
                         <Text sx={{fontSize: "1.2em", paddingBottom: "10px", fontStyle: "italic"}}>Deadline: {moment(event.date).format("MMMM DD")}</Text>
                     </Flex>
                     )})

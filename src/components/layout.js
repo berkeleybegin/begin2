@@ -83,13 +83,13 @@ const Layout = (props) => {
                     display: 'none',
                 },
               }}>
-                <NavLink href="/">Home</NavLink>
-                <NavLink href="/opportunities">Opportunities</NavLink>
-                <NavLink href="/events">Events</NavLink>
-                <NavLink href="/articles">News</NavLink>
-                <NavLink href="/directory">Directory</NavLink>
-                <NavLink href="/courses">Courses</NavLink>
-                <NavLink href="/contact">Contact</NavLink>
+                <NavLink href="/" sx={{paddingRight: "20px"}}>Home</NavLink>
+                <NavLink href="/opportunities" sx={{paddingRight: "20px"}}>Opportunities</NavLink>
+                <NavLink href="/events" sx={{paddingRight: "20px"}}>Events</NavLink>
+                <NavLink href="/articles" sx={{paddingRight: "20px"}}>News</NavLink>
+                <NavLink href="/directory" sx={{paddingRight: "20px"}}>Directory</NavLink>
+                <NavLink href="/courses" sx={{paddingRight: "20px"}}>Courses</NavLink>
+                <NavLink href="/contact" sx={{paddingRight: "20px"}}>Contact</NavLink>
               </Flex>
       </Flex>
       <Flex

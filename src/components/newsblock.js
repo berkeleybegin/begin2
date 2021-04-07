@@ -7,10 +7,12 @@ import Placeholder from "../images/placeholder.png"
 
 
 const NewsCard = ({data}) => (
+  <Link href={data.url}>
     <Flex sx={{flexDirection: "column", padding: "20px", maxWidth: "330px", alignContent: "center"}}>
-        <Image src={data.image || Placeholder} sx={{width: "330px", height: "280px", boxShadow: "small", marginBottom: "10px", objectFit: "cover", borderRadius: "10px"}}/>
-        <Text sx={{fontSize: "1.4em", paddingBottom: "10px"}}>{data.title}</Text>
+        <Image src={data.image || Placeholder} sx={{width: "330px", height: "280px", boxShadow: "small", marginBottom: "10px", objectFit: "cover", borderRadius: "10px", '@media screen and (max-width: 1000px)': {width: "400px"}}}/>
+        <Text sx={{fontSize: "1.2rem", paddingBottom: "10px"}}>{data.title}</Text>
     </Flex>
+  </Link>
 )
 
 export default function NewsBlock() {
@@ -36,16 +38,13 @@ export default function NewsBlock() {
         `}
         render={data => {
             const allNews = data.allRssJson.nodes
-            console.log(allNews)
             const allCuratedNews = allNews.filter(article => article.curated === true)
-            console.log(allCuratedNews)
             const display = []
             allCuratedNews.forEach(article => { display.push(<NewsCard data={article}></NewsCard>)})
-            console.log(display)
             return (
-                <Flex sx={{padding: "40px", marginLeft: "20px", marginRight: "20px", marginBottom: "40px", flexDirection: "column", boxShadow: "large"}}>
+                <Flex sx={{padding: "40px", marginLeft: "20px", marginRight: "20px", marginBottom: "40px", flexDirection: "column"}}>
                 <Heading sx={{fontSize: "2em", paddingBottom: "20px"}}>Featured News</Heading>
-                <Flex sx={{flexDirection: "row", justifyContent: "space-around"}}>
+                <Flex sx={{flexDirection: "row", justifyContent: "space-around", '@media screen and (max-width: 600px)': {flexDirection: "column"}}}>
                 {display}
                 </Flex >
                 <Link sx={{fontSize: "1.3em", color: "#C4820E", alignItem: "right"}} href="/articles">See More News >></Link>
