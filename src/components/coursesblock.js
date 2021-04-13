@@ -13,15 +13,19 @@ export default function CourseBlock() {
         <Heading sx={{fontSize: "1.4em", paddingBottom: "20px", fontWeight: 200, fontStyle:  "italic"}}>Not sure where to start? Take one of these introductory courses for all majors.</Heading>
 
         <Text sx={{fontSize: "1.4em", paddingBottom: "10px"}}>
-            <strong>INGEND 95/195 (2 units):</strong> A. Richard Newton Series
+            <strong>LS C12 (2 units):</strong> The Berkeley Changemaker: A Discovery Experience
         </Text>
 
         <Text sx={{fontSize: "1.4em", paddingBottom: "10px"}}>
-            <strong>COLWRIT R4B (2 units):</strong> Writing The Change We Seek
+            <strong>INDENG 95/195 (1 units):</strong> A. Richard Newton Lecture Series: A Berkeley Changemaker Course
         </Text>
 
         <Text sx={{fontSize: "1.4em", paddingBottom: "10px"}}>
-            <strong>INGEND 95/195 (2 units):</strong> Writing The Change We Seek
+            <strong>POLSCI 98/198 (1 units):</strong> Berkeley Changemaker: Topics in International Ethics
+        </Text>
+
+        <Text sx={{fontSize: "1.4em", paddingBottom: "10px"}}>
+            <strong>COLWRIT R4B (4 units):</strong> Berkeley Changemaker: Writing the Change We Seek
         </Text>
 
         <Link sx={{fontSize: "1.3em", color: "#C4820E", alignItem: "right"}} href="/courses">See More Courses >></Link>
