@@ -39,7 +39,7 @@ export default function EventsPage({ data }) {
         <Heading as="h3">No events at the moment!</Heading>
       ) : (
         <div>
-          <Heading sx={{ mb: 3 }}>Closest Deadline</Heading>
+          <Heading sx={{ mb: 3 }}>Closest Event</Heading>
           <EventCard isClosest event={closestEvent} />
           <Heading sx={{ mb: 3 }}>Upcoming</Heading>
           {allEvents.length === 1 ? (
