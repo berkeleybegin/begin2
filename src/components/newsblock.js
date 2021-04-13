@@ -42,7 +42,7 @@ export default function NewsBlock() {
             const display = []
             allCuratedNews.forEach(article => { display.push(<NewsCard data={article}></NewsCard>)})
             return (
-                <Flex sx={{padding: "40px", marginLeft: "20px", marginRight: "20px", marginBottom: "40px", flexDirection: "column"}}>
+                <Flex sx={{padding: "40px", marginLeft: "20px", marginRight: "20px", marginBottom: "40px", flexDirection: "column", '@media screen and (min-width: 1400px)': {paddingLeft: '200px'}}}>
                 <Heading sx={{fontSize: "2em", paddingBottom: "20px"}}>Featured News</Heading>
                 <Flex sx={{flexDirection: "row", justifyContent: "space-around", '@media screen and (max-width: 600px)': {flexDirection: "column"}}}>
                 {display}

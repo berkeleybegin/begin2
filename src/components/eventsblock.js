@@ -31,10 +31,12 @@ export default function EventBlock() {
                   <strong>{moment(event.date).format("MMMM DD")}</strong>: {event.title}
                 </Link>)})
             return (
-              <Flex sx={{padding: "40px", marginLeft: "20px", marginRight: "20px", marginBottom: "40px", flexDirection: "column"}}>
+              <Flex>
+              <Flex sx={{padding: "40px", marginLeft: "20px", marginRight: "20px", marginBottom: "40px", flexDirection: "column", '@media screen and (min-width: 1400px)': {paddingLeft: '200px'}}}>
               <Heading sx={{fontSize: "2em", paddingBottom: "20px"}}>Upcoming Events</Heading>
               {display}
               <Link sx={{fontSize: "1.3em", color: "#C4820E", alignItem: "right", paddingTop: "10px"}} href="/events">See More Events >></Link>
+              </Flex>
               </Flex>
             );
         }}
