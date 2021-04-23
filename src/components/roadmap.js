@@ -15,46 +15,46 @@ export default function RoadmapBlock() {
         <Flex sx={{marginTop: "60px", marginRight: "30px", marginLeft: "40px", marginBottom: "70px", justifyContent: "center", flexDirection: "row"}}>
             <Flex sx={{flexDirection: "column"}}>
                 <Heading sx={{minWidth: "200px"}}> Campus Life</Heading>
-                <RoadLink href="">Classes</RoadLink>
-                <RoadLink href="">Events</RoadLink>
-                <RoadLink href="">Student Groups</RoadLink>
-                <RoadLink href="">Competitions</RoadLink>
-                <RoadLink href="">BearX</RoadLink>
-                <RoadLink href="">Research</RoadLink>
+                <RoadLink href="/courses">Classes</RoadLink>
+                <RoadLink href="/events">Events</RoadLink>
+                <RoadLink href="/directory">Student Groups</RoadLink>
+                <RoadLink href="/opportunities">Competitions</RoadLink>
+                <RoadLink href="https://bearx.co" target="blank">BearX</RoadLink>
+                <RoadLink href="https://vcresearch.berkeley.edu">Research</RoadLink>
             </Flex>
             {img}
             <Flex sx={{flexDirection: "column"}}>
                 <Heading sx={{minWidth: "200px"}}> Academics</Heading>
-                <RoadLink href="">Berkeley-Haas Entrepreneurship Program</RoadLink>
-                <RoadLink href="">Blum Center for Developing Economies</RoadLink>
-                <RoadLink href="">Intellectual Property & Industry Alliances (IPIRA)</RoadLink>
-                <RoadLink href="">Jacobs Institute for Design Innovation</RoadLink>
-                <RoadLink href="">Sutardja Center for Entrepreneurship & Technology</RoadLink>
+                <RoadLink href="https://entrepreneurship.berkeley.edu" target="blank">Berkeley-Haas Entrepreneurship Program</RoadLink>
+                <RoadLink href="https://blumcenter.berkeley.edu/" target="blank">Blum Center for Developing Economies</RoadLink>
+                <RoadLink href="https://ipira.berkeley.edu/" target="blank">Intellectual Property & Industry Alliances (IPIRA)</RoadLink>
+                <RoadLink href="https://jacobsinstitute.berkeley.edu/" target="blank">Jacobs Institute for Design Innovation</RoadLink>
+                <RoadLink href="https://scet.berkeley.edu/" target="blank">Sutardja Center for Entrepreneurship & Technology</RoadLink>
             </Flex>
             {img}
             <Flex sx={{flexDirection: "column"}}>
                 <Heading sx={{minWidth: "200px"}}> Accelerate</Heading>
-                <RoadLink href="">Big Ideas Contest</RoadLink>
-                <RoadLink href="">Citris Foundry</RoadLink>
-                <RoadLink href="">NSF I-Corps</RoadLink>
-                <RoadLink href="">LAUNCH</RoadLink>
-                <RoadLink href="">SkyDeck</RoadLink>
-                <RoadLink href="">Startup @ Berkeley Law</RoadLink>
+                <RoadLink href="https://bigideascontest.org/" target="blank">Big Ideas Contest</RoadLink>
+                <RoadLink href="https://citrisfoundry.org/" target="blank">Citris Foundry</RoadLink>
+                <RoadLink href="https://bayicorps.com/" target="blank">NSF I-Corps</RoadLink>
+                <RoadLink href="https://www.uclaunch.com/" target="blank">LAUNCH</RoadLink>
+                <RoadLink href="https://skydeck.berkeley.edu/" target="blank">SkyDeck</RoadLink>
+                <RoadLink href="https://www.law.berkeley.edu/experiential/startupberkeleylaw/" target="blank">Startup @ Berkeley Law</RoadLink>
             </Flex>
             {img} 
             <Flex sx={{flexDirection: "column"}}>
                 <Heading sx={{minWidth: "200px"}}> Scale</Heading>
-                <RoadLink href="">Angels</RoadLink>
-                <RoadLink href="">Government Grants</RoadLink>
-                <RoadLink href="">NSF I-Corps</RoadLink>
-                <RoadLink href="">Incubators</RoadLink>
-                <RoadLink href="">Venture Capital</RoadLink>
+                <RoadLink href="/directory">Angels</RoadLink>
+                <RoadLink href="/directory">Government Grants</RoadLink>
+                <RoadLink href="https://bayicorps.com/" target="blank">NSF I-Corps</RoadLink>
+                <RoadLink href="/directory">Incubators</RoadLink>
+                <RoadLink href="/directory">Venture Capital</RoadLink>
             </Flex>
         </Flex>
     </Flex>
     )
   }
 
-  const RoadLink = ({href, children}) => (
-    <Link href={href} sx={{paddingBottom: "10px"}}>{children}</Link>
+  const RoadLink = ({href, target, children}) => (
+    <Link href={href} sx={{paddingBottom: "10px"}} target={target}>{children}</Link>
   )
