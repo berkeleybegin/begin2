@@ -5,7 +5,7 @@ export default function Head() {
   return (
     <Helmet>
       <link rel="stylesheet" href="https://use.typekit.net/qko1qsv.css" />
-      <title>Begin Gateway To Innovation</title>
+      <title>Berkeley Gateway To Innovation</title>
       {/* <!-- Global site tag (gtag.js) - Google Analytics --> */}
       <script async src="https://www.googletagmanager.com/gtag/js?id=UA-70509216-4"></script>
       {/* <script>
