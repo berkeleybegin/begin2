@@ -83,7 +83,6 @@ const Layout = (props) => {
                     display: 'none',
                 },
               }}>
-                <NavLink href="/" sx={{paddingRight: "20px"}}>Home</NavLink>
                 <NavLink href="/opportunities" sx={{paddingRight: "20px"}}>Opportunities</NavLink>
                 <NavLink href="/events" sx={{paddingRight: "20px"}}>Events</NavLink>
                 <NavLink href="/articles" sx={{paddingRight: "20px"}}>News</NavLink>
