@@ -22,7 +22,7 @@ export default function RoadmapBlock() {
                 <RoadLink href="/directory">Student Groups</RoadLink>
                 <RoadLink href="/opportunities">Competitions</RoadLink>
                 <RoadLink href="https://bearx.co" target="blank">BearX</RoadLink>
-                <RoadLink href="https://vcresearch.berkeley.edu">Research</RoadLink>
+                <RoadLink href="https://vcresearch.berkeley.edu" target="blank">Research</RoadLink>
             </Flex>
             {img}
             <Flex sx={{flexDirection: "column"}}>
