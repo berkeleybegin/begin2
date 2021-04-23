@@ -14,6 +14,7 @@ import EventBlock from "../components/eventsblock";
 import NewsBlock from "../components/newsblock"
 import OppsBlock from "../components/oppsblock"
 import CourseBlock from "../components/coursesblock"
+import RoadmapBlock from "../components/roadmap"
 
 import CountUp from "react-countup"
 
@@ -84,6 +85,7 @@ export default function HomePage() {
       <EntryPage />
       <WhyBlock />
       <NumBlock />
+      <RoadmapBlock />
       <div sx={{background: `url(${bg}) center center`, backgroundRepeat: "repeat"}}>
         <EventBlock />
         <NewsBlock />
