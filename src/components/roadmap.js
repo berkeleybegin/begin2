@@ -11,8 +11,10 @@ export default function RoadmapBlock() {
     const img = <Image src={sep} sx={{maxHeight: "300px", paddingRight: "40px", paddingLeft: "20px", alignSelf: "center"}}></Image>;
 
     return (
-        <Flex sx={{alignItems: "center", justifyContent: "center", width: "100wh", '@media screen and (max-width: 900px)': {display: "none"}}}>
-        <Flex sx={{marginTop: "60px", marginRight: "30px", marginLeft: "40px", marginBottom: "70px", justifyContent: "center", flexDirection: "row"}}>
+        <div sx={{marginTop: "30px", marginLeft: "40px", marginBottom: "70px", '@media screen and (max-width: 900px)': {display: "none"}}}>
+            <Heading sx={{fontSize: "2em", paddingBottom: "20px"}}>Roadmap</Heading>
+        <Flex sx={{alignItems: "center", justifyContent: "center", flexDirection: "column", width: "100wh"}}>
+        <Flex sx={{marginRight: "30px", justifyContent: "center", flexDirection: "row"}}>
             <Flex sx={{flexDirection: "column"}}>
                 <Heading sx={{minWidth: "200px"}}> Campus Life</Heading>
                 <RoadLink href="/courses">Classes</RoadLink>
@@ -52,6 +54,7 @@ export default function RoadmapBlock() {
             </Flex>
         </Flex>
     </Flex>
+    </div>
     )
   }
 

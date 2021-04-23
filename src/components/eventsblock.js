@@ -27,17 +27,17 @@ export default function EventBlock() {
             const display = []
             allEvents.forEach(event => { 
               display.push(
-                <Link sx={{fontSize: "1.3rem", paddingBottom: "10px"}} href={event.url}>
+                <Link sx={{fontSize: "1.2rem", paddingBottom: "10px"}} href={event.url}>
                   <strong>{moment(event.date).format("MMMM DD")}</strong>: {event.title}
                 </Link>)})
             return (
-              <Flex>
-              <Flex sx={{padding: "40px", marginLeft: "20px", marginRight: "20px", marginBottom: "40px", flexDirection: "column", '@media screen and (min-width: 1400px)': {paddingLeft: '200px'}}}>
+              <div>
+              <Flex sx={{padding: "40px", marginRight: "20px", marginBottom: "40px", flexDirection: "column"}}>
               <Heading sx={{fontSize: "2em", paddingBottom: "20px"}}>Upcoming Events</Heading>
               {display}
               <Link sx={{fontSize: "1.3em", color: "#C4820E", alignItem: "right", paddingTop: "10px"}} href="/events">See More Events >></Link>
               </Flex>
-              </Flex>
+              </div>
             );
         }}
       />
