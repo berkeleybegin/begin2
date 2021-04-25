@@ -5,6 +5,7 @@ import moment from "moment"
 import PageTitle from "../components/page_title"
 import Layout from "../components/layout"
 import PropTypes from "prop-types"
+import ReactMarkdown from "react-markdown"
 
 import "./index.css"
 
@@ -94,7 +95,7 @@ function EventCard({ isClosest, event }) {
         {/* <Text sx={{paddingRight: '10px'}}>At {event.location}</Text> */}
       </Flex>
       <br></br>
-      <Text>{event.description}</Text>
+      <Text><ReactMarkdown components={{a: Link}}>{event.description}</ReactMarkdown></Text>
     </Card>
   )
 }

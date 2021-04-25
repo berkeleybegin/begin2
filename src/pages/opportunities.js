@@ -5,6 +5,7 @@ import moment from "moment"
 import PageTitle from "../components/page_title"
 import Layout from "../components/layout"
 import PropTypes from "prop-types"
+import ReactMarkdown from 'react-markdown';
 
 export const query = graphql`
   query opportunitiesPageQuery {
@@ -108,7 +109,7 @@ function OpportunityCard({ isClosest, opportunity, placeholderImage }) {
           Due {moment(opportunity.date).format("MM/DD/YYYY")}
         </Text>
       </Flex>
-      <Text>{opportunity.description}</Text>
+      <Text><ReactMarkdown components={{a: Link}}>{opportunity.description}</ReactMarkdown></Text>
     </Card>
   )
 }
