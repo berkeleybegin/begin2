@@ -17,6 +17,8 @@ import PageTitle from "../components/page_title"
 import Layout from "../components/layout"
 import PropTypes from "prop-types"
 import Slider from "react-slick"
+import ReactMarkdown from 'react-markdown'
+
 import "slick-carousel/slick/slick.css"
 import "slick-carousel/slick/slick-theme.css"
 
@@ -178,7 +180,7 @@ function ArticleCard({ article, inSlider }) {
           {moment(article.date).format("MM/DD/YYYY")}
         </Text>
       </Flex>
-      <Text>{article.excerpt}</Text>
+      <Text><ReactMarkdown components={{a: Link}}>{article.excerpt}</ReactMarkdown></Text>
     </Card>
   )
 }

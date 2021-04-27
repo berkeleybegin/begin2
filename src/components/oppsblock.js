@@ -29,16 +29,18 @@ export default function OppsBlock() {
             const display = []
             allOpps.forEach(event => { display.push(
                     <Flex sx={{flexDirection: "column"}}>
-                        <Link sx={{fontSize: "1.4em", fontWeight: 600}} href={event.url}>{event.title}</Link>
+                        <Link sx={{fontSize: "1.2em", fontWeight: 600}} href={event.url}>{event.title}</Link>
                         <Text sx={{fontSize: "1.2em", paddingBottom: "10px", fontStyle: "italic"}}>Deadline: {moment(event.date).format("MMMM DD")}</Text>
                     </Flex>
                     )})
             return (
-                <Flex sx={{padding: "40px", marginLeft: "20px", marginRight: "20px", marginBottom: "40px", flexDirection: "column", '@media screen and (min-width: 1400px)': {paddingLeft: '200px'}}}>
+              <div sx={{padding: "40px", marginRight: "20px", marginBottom: "40px"}}>
                 <Heading sx={{fontSize: "2em", paddingBottom: "20px"}}>Opportunities and Deadlines</Heading>
+                <Flex sx={{flexDirection: "column", margin: "auto", maxWidth: "1440px"}}>
                 {display}
                 <Link sx={{fontSize: "1.3em", color: "#C4820E", alignItem: "right"}} href="/opportunities">See More Opportunities >></Link>
                 </Flex>
+              </div>
             );
         }}
       />
