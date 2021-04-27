@@ -54,10 +54,9 @@ collections:
     extension: json
     fields:
       - { label: "Template Key", name: "templateKey", widget: "hidden", default: "fb-post" }
-      - { label: "ID", name: "id", widget: "string" }
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Url", name: "url", widget: "string" }
-      - { label: "Page", name: "page", widget: "string" }
+      - { label: "Organization", name: "page", widget: "string" }
       - { label: "Description", name: "description", widget: "markdown" }
       - { label: "Date", name: "date", widget: "datetime" }
       - { label: "Location", name: "location", widget: "string" }
