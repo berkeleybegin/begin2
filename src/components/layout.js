@@ -48,6 +48,9 @@ const Layout = (props) => {
         sx={{
           p: [3, 4],
           alignItems: "center",
+          position: 'fixed',
+          bg: 'white',
+          width: '100%'
         }}
         as="header"
       >
