@@ -16,6 +16,8 @@ import OppsBlock from "../components/oppsblock"
 import CourseBlock from "../components/coursesblock"
 import RoadmapBlock from "../components/roadmap"
 
+import Footer from "../components/footer"
+
 import CountUp from "react-countup"
 
 function Paragraph({ children }) {
@@ -92,6 +94,7 @@ export default function HomePage() {
         <OppsBlock />
         <CourseBlock />
       </div>
+      <Footer />
     </Layout>
   )
 }
