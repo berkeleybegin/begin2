@@ -25,7 +25,8 @@ export default function OppsBlock() {
         `}
         render={data => {
             const allOppsData = data.allOpportunitiesJson.nodes
-            const allOpps = allOppsData.filter((event)=>(moment(event.date).diff(moment(), 'days')>0));
+            let allOpps = allOppsData.filter((event)=>(moment(event.date).diff(moment(), 'days')>0));
+            allOpps = allOpps.slice(0, 5);
             const display = []
             allOpps.forEach(event => { display.push(
                     <Flex sx={{flexDirection: "column"}}>

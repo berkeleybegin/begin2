@@ -38,7 +38,11 @@ export default function NewsBlock() {
         `}
         render={data => {
             const allNews = data.allRssJson.nodes
-            const allCuratedNews = allNews.filter(article => article.curated === true)
+            let allCuratedNews = allNews.filter(article => article.curated === true)
+
+            allCuratedNews = allCuratedNews.sort((a, b) => moment(b.date).diff(moment(a.date)));
+            allCuratedNews = allCuratedNews.slice(0, 4)
+
             const display = []
             allCuratedNews.forEach(article => { display.push(<NewsCard data={article}></NewsCard>)})
             return (

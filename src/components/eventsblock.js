@@ -3,6 +3,7 @@
 import { jsx, Heading, Text, Flex, Image, Link } from "theme-ui"
 import moment from "moment"
 import { StaticQuery, graphql } from "gatsby"
+import { lte } from "lodash"
 
 
 export default function EventBlock() {
@@ -23,8 +24,9 @@ export default function EventBlock() {
         `}
         render={data => {
             const allEventsFb = data.allFbJson.nodes
-            const allEvents = allEventsFb.filter((event)=>(moment(event.date).diff(moment(), 'days')>0));
+            let allEvents = allEventsFb.filter((event)=>(moment(event.date).diff(moment(), 'days')>0));
             const display = []
+            allEvents = allEvents.slice(0, 5);
             allEvents.forEach(event => { 
               display.push(
                 <Link sx={{fontSize: "1.2rem", paddingBottom: "10px"}} href={event.url}>
