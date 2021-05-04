@@ -68,7 +68,8 @@ const Layout = (props) => {
           position: 'fixed',
           bg: navColor,
           transition: "background-color 100ms ease-in-out",
-          width: '100%'
+          width: '100%', 
+          zIndex: '1'
         }}
         as="header"
       >
