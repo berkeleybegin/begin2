@@ -56,7 +56,7 @@ const Layout = (props) => {
     }
   }
 
-  let propsx = {paddingRight: "20px", color: (navColor === '#f7f7f7') ? '#003263' : '#f7f7f7', transition: "color 100ms ease-in-out", fontWeight: 500};
+  let propsx = {paddingRight: "20px", color: (navColor === '#f7f7f7') ? '#003263' : '#f7f7f7', transition: "color 100ms ease-in-out"};
 
   return (
     <Styled.root>
@@ -109,7 +109,7 @@ const Layout = (props) => {
                 <NavLink href="/opportunities" sx={propsx}>Opportunities</NavLink>
                 <NavLink href="/events" sx={propsx}>Events</NavLink>
                 <NavLink href="/articles" sx={propsx}>News</NavLink>
-                <NavLink href="/directory" sx={propsx}>Directory</NavLink>
+                <NavLink href="/directory" sx={propsx}>Resources</NavLink>
                 <NavLink href="/courses" sx={propsx}>Courses</NavLink>
                 <NavLink href="/contact" sx={propsx}>Contact</NavLink>
               </Flex>
