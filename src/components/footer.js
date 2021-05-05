@@ -55,8 +55,8 @@ export default function Footer() {
             // )
 
             return (
-                <div sx={{width: "100wh", bg: "#eeeeee"}}>
-            <Flex sx={{padding: "40px", marginBottom: "40px", maxWidth: "1440px", margin: "auto", flexDirection: "column", '@media screen and (min-width: 1400px)': {paddingLeft: "0px"}}}>
+                <div sx={{width: "100wh", bg: "#eeeeee", marginTop: "30px"}}>
+            <Flex sx={{padding: "40px", maxWidth: "1440px", margin: "auto", flexDirection: "column", '@media screen and (min-width: 1400px)': {paddingLeft: "0px"}}}>
                 <Heading sx={{fontSize: "2em", paddingBottom: "20px"}}>Directory</Heading>
                 <Flex sx={{flexDirection: "row", justifyContent: "space-between", width: "100%"}}>
                     <div>
