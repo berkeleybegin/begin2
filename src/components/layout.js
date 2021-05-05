@@ -9,6 +9,8 @@ import PropTypes from "prop-types"
 import Head from "./head"
 import Sidebar from "./sidebar.mdx"
 
+import Footer from "./footer"
+
 import logo from "../images/navbarlogo.png"
 import logo2 from "../images/navbarlogoabbr.png"
 
@@ -141,6 +143,7 @@ const Layout = (props) => {
           </Container>
         </Box>
       </Flex>
+      <Footer />
     </Styled.root>
   )
 }

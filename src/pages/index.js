@@ -94,7 +94,7 @@ export default function HomePage() {
         <OppsBlock />
         <CourseBlock />
       </div>
-      <Footer />
+      {/* <Footer /> */}
     </Layout>
   )
 }
