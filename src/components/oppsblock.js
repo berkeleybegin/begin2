@@ -35,7 +35,7 @@ export default function OppsBlock() {
                     </Flex>
                     )})
             return (
-              <div sx={{padding: "40px", marginRight: "20px", marginBottom: "40px"}}>
+              <div sx={{marginTop: "30px", marginBottom: "70px"}}>
                 <Flex sx={{flexDirection: "column", margin: "auto", maxWidth: "1440px"}}>
                   <Heading sx={{fontSize: "2em", paddingBottom: "20px"}}>Opportunities and Deadlines</Heading>
                 {display}
