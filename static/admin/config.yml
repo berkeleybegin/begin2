@@ -21,8 +21,8 @@ collections:
     extension: json
     fields:
       - { label: "Template Key", name: "templateKey", widget: "hidden", default: "rss-post" }
-      - { label: "ID", name: "id", widget: "string" }
-      - { label: "Feed Key", name: "feedKey", widget: "string" }
+      - { label: "ID", name: "id", widget: "hidden" }
+      - { label: "Organization", name: "feedKey", widget: "string" }
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Url", name: "url", widget: "string" }
       - { label: "Author", name: "author", widget: "string" }
