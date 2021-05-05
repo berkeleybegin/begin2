@@ -9,8 +9,8 @@ import PropTypes from "prop-types"
 import Head from "./head"
 import Sidebar from "./sidebar.mdx"
 
-import logo from "../images/navbar-logo.png"
-import logo2 from "../images/begin-logo.png"
+import logo from "../images/navbarlogo.png"
+import logo2 from "../images/navbarlogoabbr.png"
 
 const Layout = (props) => {
   const [sidebarOpen, setSidebarOpen] = useState(false)
