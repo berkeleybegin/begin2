@@ -76,7 +76,7 @@ export default function ResourcesPage({data}) {
         '@media screen and (max-width: 600px)': {
           flexDirection: "column",
         }}}>
-      <PageTitle>Directory</PageTitle>
+      <PageTitle>Resources</PageTitle>
       <Input
         placeholder="Search"
         sx={{ 
