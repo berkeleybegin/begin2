@@ -7,7 +7,7 @@ import { StaticQuery, graphql } from "gatsby"
 
 export default function CourseBlock() {
     return (
-        <div sx={{marginTop: "30px", marginBottom: "70px", bg: "#f7f7f7"}}>
+        <div sx={{paddingLeft: '40px', marginTop: "30px", marginBottom: "70px", bg: "#f7f7f7", '@media screen and (min-width: 1400px)': {paddingLeft: '0px'}}}>
 
         <Flex sx={{flexDirection: "column", maxWidth: "1440px", margin: "auto"}}>
 

@@ -33,7 +33,7 @@ export default function EventBlock() {
                   <strong>{moment(event.date).format("MMMM DD")}</strong>: {event.title}
                 </Link>)})
             return (
-              <div sx={{marginTop: "30px", marginBottom: "70px", '@media screen and (max-width: 1400px)': {padding: '0px'}}}>
+              <div sx={{paddingLeft: "40px", marginTop: "30px", marginBottom: "70px", '@media screen and (min-width: 1400px)': {paddingLeft: '0px'}}}>
                 <Flex sx={{flexDirection: "column", maxWidth: "1440px", justifyContent: "flex-start", margin: "auto"}}>
                 <Heading sx={{fontSize: "2em", paddingBottom: "20px"}}>Upcoming Events</Heading>
                   {display}
