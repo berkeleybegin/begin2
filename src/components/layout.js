@@ -11,8 +11,8 @@ import Sidebar from "./sidebar.mdx"
 
 import Footer from "./footer"
 
-import logo from "../images/navbarlogo.png"
-import logo2 from "../images/navbarlogoabbr.png"
+import logo from "../images/begin-logo.svg"
+import logo2 from "../images/begin-logo-abbr.svg"
 
 const Layout = (props) => {
   const [sidebarOpen, setSidebarOpen] = useState(false)
