@@ -90,7 +90,7 @@ function EventCard({ isClosest, event }) {
         }}
       >
         <Text sx={{ mr: 2 }}>
-          Due <div sx={{fontWeight: 600, display: "inline"}}> {moment(event.date).format('MMM D, YYYY')} </div>| In {moment(event.date).diff(moment(), 'days')} Days
+          <div sx={{fontWeight: 600, display: "inline"}}> {moment(event.date).format('MMM D, YYYY')} </div>| In {moment(event.date).diff(moment(), 'days')} Days
         </Text>
         {/* <Text sx={{paddingRight: '10px'}}>At {event.location}</Text> */}
       </Flex>

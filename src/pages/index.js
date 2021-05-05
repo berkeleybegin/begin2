@@ -16,6 +16,8 @@ import OppsBlock from "../components/oppsblock"
 import CourseBlock from "../components/coursesblock"
 import RoadmapBlock from "../components/roadmap"
 
+import Footer from "../components/footer"
+
 import CountUp from "react-countup"
 
 function Paragraph({ children }) {
@@ -61,7 +63,7 @@ const EntryPage = () => (
             background: `url(${mainImage}) no-repeat center center fixed`, backgroundSize: 'cover', backgroundRepeat: 'no-repeat', objectFit: 'contain',
             }}>
     <Heading sx={{fontSize: "3rem", color: "white", fontWeight: 200, '@media screen and (max-width: 800px)': {marginLeft: "20px"}}}>Welcome to the</Heading>
-    <Heading sx={{fontSize: "3rem", color: "white", fontWeight: 200, '@media screen and (max-width: 800px)': {marginLeft: "20px"}}}><b>Be</b>rkeley <b>G</b>ateway to <b>In</b>novation</Heading> 
+    <Heading sx={{fontSize: "3rem", color: "white", fontWeight: 600, '@media screen and (max-width: 800px)': {marginLeft: "20px"}}}>Berkeley Gateway to Innovation</Heading> 
   </Flex> 
 )
 
@@ -92,6 +94,7 @@ export default function HomePage() {
         <OppsBlock />
         <CourseBlock />
       </div>
+      {/* <Footer /> */}
     </Layout>
   )
 }

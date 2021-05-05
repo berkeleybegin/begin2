@@ -2,12 +2,17 @@
 import { jsx, Container, Flex, Box, Styled, MenuButton, Image, Link } from "theme-ui"
 import { Sidenav } from "@theme-ui/sidenav"
 import NavLink from "./nav_link"
-import { useState, useRef } from "react"
+import { useState, useRef, useEffect} from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import PropTypes from "prop-types"
 
 import Head from "./head"
 import Sidebar from "./sidebar.mdx"
+
+import Footer from "./footer"
+
+import logo from "../images/begin-logo.svg"
+import logo2 from "../images/begin-logo-abbr.svg"
 
 const Layout = (props) => {
   const [sidebarOpen, setSidebarOpen] = useState(false)
@@ -34,20 +39,39 @@ const Layout = (props) => {
     }
   `)
 
-  const logoGraphic = logoData.allImageSharp.nodes.find(
-    (image) => image.fluid.originalName === "logo_graphic.png"
-  ).fluid.src
+
   const logoText = logoData.allImageSharp.nodes.find(
     (image) => image.fluid.originalName === "logo_text_horizontal.png"
   ).fluid.src
+
+  let [navColor, setNavColor] = useState('#f7f7f7');
+
+  useEffect(()=> {
+    window.addEventListener("scroll", handleScroll);
+  })
+
+  const handleScroll = () => {
+    if (window.scrollY > 20 && navColor === '#f7f7f7') {
+      setNavColor('#003262');
+    } else if (window.scrollY <= 20 && navColor !== '#f7f7f7') {
+      setNavColor("#f7f7f7");
+    }
+  }
+
+  let propsx = {paddingRight: "20px", color: (navColor === '#f7f7f7') ? '#003263' : '#f7f7f7', transition: "color 100ms ease-in-out"};
 
   return (
     <Styled.root>
       <Head />
       <Flex
         sx={{
-          p: [3, 4],
+          p: [2, 3],
           alignItems: "center",
+          position: 'fixed',
+          bg: navColor,
+          transition: "background-color 100ms ease-in-out",
+          width: '100%', 
+          zIndex: '1'
         }}
         as="header"
       >
@@ -61,8 +85,9 @@ const Layout = (props) => {
           }}
         /> */}
         <Link href="/" sx={{margin: 0, padding:0}}>
-          <Image sx={{ height: "32px", mr: 3 }} src={logoGraphic} />
-          <Image sx={{ height: "32px", mt: 2 }} src={logoText} />
+          {(navColor === "#f7f7f7") 
+          ? <Image sx={{ height: "40px", mt: 2 }} src={logo} />
+          : <Image sx={{ height: "40px", mt: 2 }} src={logo2} /> }
         </Link>
 
             <Flex
@@ -83,18 +108,19 @@ const Layout = (props) => {
                     display: 'none',
                 },
               }}>
-                <NavLink href="/opportunities" sx={{paddingRight: "20px"}}>Opportunities</NavLink>
-                <NavLink href="/events" sx={{paddingRight: "20px"}}>Events</NavLink>
-                <NavLink href="/articles" sx={{paddingRight: "20px"}}>News</NavLink>
-                <NavLink href="/directory" sx={{paddingRight: "20px"}}>Directory</NavLink>
-                <NavLink href="/courses" sx={{paddingRight: "20px"}}>Courses</NavLink>
-                <NavLink href="/contact" sx={{paddingRight: "20px"}}>Contact</NavLink>
+                <NavLink href="/opportunities" sx={propsx}>Opportunities</NavLink>
+                <NavLink href="/events" sx={propsx}>Events</NavLink>
+                <NavLink href="/articles" sx={propsx}>News</NavLink>
+                <NavLink href="/directory" sx={propsx}>Resources</NavLink>
+                <NavLink href="/courses" sx={propsx}>Courses</NavLink>
+                <NavLink href="/contact" sx={propsx}>Contact</NavLink>
               </Flex>
       </Flex>
       <Flex
         sx={{
           flexDirection: "row",
           minHeight: "100vh",
+          paddingTop: '100px',
         }}
       >
         <Box
@@ -117,6 +143,7 @@ const Layout = (props) => {
           </Container>
         </Box>
       </Flex>
+      <Footer />
     </Styled.root>
   )
 }

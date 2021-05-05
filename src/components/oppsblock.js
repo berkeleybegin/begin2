@@ -25,7 +25,8 @@ export default function OppsBlock() {
         `}
         render={data => {
             const allOppsData = data.allOpportunitiesJson.nodes
-            const allOpps = allOppsData.filter((event)=>(moment(event.date).diff(moment(), 'days')>0));
+            let allOpps = allOppsData.filter((event)=>(moment(event.date).diff(moment(), 'days')>0));
+            allOpps = allOpps.slice(0, 5);
             const display = []
             allOpps.forEach(event => { display.push(
                     <Flex sx={{flexDirection: "column"}}>
@@ -34,9 +35,9 @@ export default function OppsBlock() {
                     </Flex>
                     )})
             return (
-              <div sx={{padding: "40px", marginRight: "20px", marginBottom: "40px"}}>
-                <Heading sx={{fontSize: "2em", paddingBottom: "20px"}}>Opportunities and Deadlines</Heading>
+              <div sx={{paddingLeft: '40px', marginTop: "30px", marginBottom: "70px", '@media screen and (min-width: 1400px)': {paddingLeft: '0px'}}}>
                 <Flex sx={{flexDirection: "column", margin: "auto", maxWidth: "1440px"}}>
+                  <Heading sx={{fontSize: "2em", paddingBottom: "20px"}}>Opportunities and Deadlines</Heading>
                 {display}
                 <Link sx={{fontSize: "1.3em", color: "#C4820E", alignItem: "right"}} href="/opportunities">See More Opportunities >></Link>
                 </Flex>
