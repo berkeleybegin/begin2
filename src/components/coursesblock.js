@@ -29,6 +29,10 @@ export default function CourseBlock() {
             <strong>COLWRIT R4B (4 units):</strong> Berkeley Changemaker: Writing the Change We Seek
         </Text>
 
+        <Text sx={{fontSize: "1.2em", paddingBottom: "10px"}}>
+            <strong>UGBA 96 (1 units):</strong> Berkeley Changemakers: Big Ideas
+        </Text>
+
         <Link sx={{fontSize: "1.3em", color: "#C4820E", alignItem: "right"}} href="/courses">See More Courses >></Link>
     </Flex>
     </div>
