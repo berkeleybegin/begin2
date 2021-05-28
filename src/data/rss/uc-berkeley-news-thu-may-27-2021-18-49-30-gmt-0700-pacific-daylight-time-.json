@@ -1,10 +1,11 @@
 {
-  "templateKey": "rss-post",
-  "date": "2021-05-28T01:49:30.572Z",
-  "feedKey": "UC Berkeley News",
-  "title": "UC Berkeley will auction NFTs of Nobel Prize-winning inventions to fund research",
-  "url": "https://news.berkeley.edu/2021/05/27/uc-berkeley-will-auction-nfts-of-nobel-prize-winning-inventions-to-fund-research/",
-  "author": "Robert Sanders",
   "excerpt": "Most of us will never win a Nobel Prize, but the University of California, Berkeley, is offering everyone the opportunity to purchase the next best thing: nonfungible tokens (NFTs) for the patent disclosures at the heart of two Nobel Prize-winning inventions from the university’s research labs.\n\nThe NFTs link to online digitized documents — internal forms and correspondence that document the initial research findings that led to two of the most important biomedical breakthroughs of the 21st century: CRISPR-Cas9 gene editing, for which UC Berkeley’s Jennifer Doudna shared the 2020 Nobel in Chemistry; and cancer immunotherapy, for which James Allison shared the 2018 Nobel in Physiology or Medicine. UC Berkeley will continue to own the relevant patents.\n\nThe university minted an [NFT for Allison’s cancer immunotherapy invention](https://foundation.app/UCBerkeley/the-fourth-pillar-uc-berkeley-2021-41258) today (May 27) in advance of a 24-hour auction that will begin after the piece is listed as early as Wednesday, June 2. The auction will take place on Foundation ([foundation.app](https://foundation.app/)), an Ethereum-based NFT auction platform. Ethereum is a blockchain network that uses ether, or ETH, for transactions. The proceeds of the auction in ETH will fund education and innovative research at UC Berkeley, including work in the campus’s blockchain hub, [Blockchain at Berkeley](https://blockchain.berkeley.edu/).",
+  "feedKey": "UC Berkeley News",
+  "templateKey": "rss-post",
+  "author": "Robert Sanders",
+  "date": "2021-05-28T01:49:30.572Z",
+  "url": "https://news.berkeley.edu/2021/05/27/uc-berkeley-will-auction-nfts-of-nobel-prize-winning-inventions-to-fund-research/",
+  "curated": true,
+  "title": "UC Berkeley will auction NFTs of Nobel Prize-winning inventions to fund research",
   "image": "/img/nftscreenshot750px.jpg"
 }
