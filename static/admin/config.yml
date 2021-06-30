@@ -91,6 +91,7 @@ collections:
       - { label: "Description", name: "description", widget: "markdown" }
       - { label: "Date", name: "date", widget: "datetime" }
       - { label: "Image", name: "image", widget: "image", required: false}
+      - { label: "Berkeley Affiliated", name: "calAffiliated", widget: "boolean", required: false}
 
   
   - name: "opportunities"
