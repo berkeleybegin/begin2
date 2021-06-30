@@ -1,12 +1,13 @@
 {
+  "calAffiliated": true,
   "templateKey": "ird-resource",
   "date": "2020-10-04T01:25:32.398Z",
+  "url": "https://amenaced.berkeley.edu/",
   "title": "AMENA Center for Entrepreneurship & Development",
   "tags": [
     "New Venture Education"
   ],
-  "url": "https://amenaced.berkeley.edu/",
-  "description": "The AMENA (Asia, Middle East, and North Africa) Center for Entrepreneurship and Development leverages the strengths of the University of California at Berkeley to alleviate the region’s entrepreneurship, innovation, intra-preneurship, skills, and gender gaps.",
   "id": "3f0a4f98-b98c-40da-913e-33d38e6bee82",
-  "image": "/img/amena-logo.png"
+  "image": "/img/amena-logo.png",
+  "description": "The AMENA (Asia, Middle East, and North Africa) Center for Entrepreneurship and Development leverages the strengths of the University of California at Berkeley to alleviate the region’s entrepreneurship, innovation, intra-preneurship, skills, and gender gaps."
 }
