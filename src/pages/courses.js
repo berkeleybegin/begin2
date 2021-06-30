@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { jsx, Card, Heading, Text, Input, Flex } from "theme-ui"
+import { jsx, Card, Heading, Text, Input, Flex, Link } from "theme-ui"
 import Chip from "../components/chip"
 import { useState, useEffect } from "react"
 import { graphql } from "gatsby"
@@ -99,6 +99,7 @@ CoursesPage.propTypes = {
 }
 
 function CourseCard({ course }) {
+  const s = course.number.split(" ").join("%2520");
   return (
     <Card
       sx={{
@@ -106,7 +107,16 @@ function CourseCard({ course }) {
         mb: 3,
       }}
     >
-      <Heading variant="cardTitle">{course.number}</Heading>
+      <Heading variant="cardTitle">    
+      <Link 
+        href={`https://classes.berkeley.edu/search/class/${s}?retain-filters=1`}
+        target="_blank"
+        sx= {{textDecoration: "none", color: "inherit"}}
+      >
+          {course.number}
+      </Link>
+    </Heading>
+      
       <Heading variant="subtitle">{course.title}</Heading>
       <Text
         sx={{

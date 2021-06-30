@@ -85,7 +85,7 @@ export default function Footer() {
                         action="/newsletter"
                     >
                         <input name="bot-field" type="hidden" />
-                        <input name="form-name" value="contact" type="hidden" />
+                        <input name="form-name" value="newsletter" type="hidden" />
                             <Input
                             required
                             name="email"
