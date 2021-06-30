@@ -1,19 +1,32 @@
 
 /** @jsx jsx */
 import { jsx, Heading, Text, Flex, Image, Link } from "theme-ui"
-import moment from "moment"
-import { StaticQuery, graphql } from "gatsby"
+import moment from "moment";
+import { StaticQuery, graphql } from "gatsby";
+import { useState, useEffect} from "react";
 
 import sep from "../images/separator.png"
 import sepMob from "../images/arrow-mobile.png"
 
 
 export default function RoadmapBlock() {
-    // const img = window.innerWidth > 900
-    //     ? <Image src={sep} sx={{maxHeight: "300px", paddingRight: "40px", paddingLeft: "20px", alignSelf: "center"}}></Image>
-    //     : <Image src={sepMob} sx={{maxHeight: "80px", paddingBottom: "20px", alignSelf: "center"}}></Image>
 
-    const img = <Image src={sep} sx={{maxHeight: "300px", paddingRight: "40px", paddingLeft: "20px", alignSelf: "center"}}></Image>;
+    const [width, setWidth] = useState(0);
+
+    useEffect(() => {
+        setWidth(window.innerWidth);
+        window.addEventListener("resize", () => {
+            setWidth(window.innerWidth);
+        });
+            return () => {
+                window.removeEventListener("resize", () => {});
+            };
+        }, []);
+
+    const img = width > 900
+        ? <Image src={sep} sx={{maxHeight: "300px", paddingRight: "40px", paddingLeft: "20px", alignSelf: "center"}}></Image>
+        : <Image src={sepMob} sx={{maxHeight: "80px", paddingBottom: "20px", alignSelf: "center"}}></Image>
+
 
     return (
         <div sx={{paddingLeft: "40px", marginTop: "30px", marginBottom: "70px", '@media screen and (min-width: 1400px)': {paddingLeft: '0px'}}}>
