@@ -82,7 +82,7 @@ export default function Footer() {
                         method="POST"
                         data-netlify="true"
                         netlify-honeypot="bot-field"
-                        action="/newsletter"
+                        action="/"
                     >
                         <input name="bot-field" type="hidden" />
                         <input name="form-name" value="newsletter" type="hidden" />
