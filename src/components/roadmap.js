@@ -9,9 +9,11 @@ import sepMob from "../images/arrow-mobile.png"
 
 
 export default function RoadmapBlock() {
-    const img = window.innerWidth > 900
-        ? <Image src={sep} sx={{maxHeight: "300px", paddingRight: "40px", paddingLeft: "20px", alignSelf: "center"}}></Image>
-        : <Image src={sepMob} sx={{maxHeight: "80px", paddingBottom: "20px", alignSelf: "center"}}></Image>
+    // const img = window.innerWidth > 900
+    //     ? <Image src={sep} sx={{maxHeight: "300px", paddingRight: "40px", paddingLeft: "20px", alignSelf: "center"}}></Image>
+    //     : <Image src={sepMob} sx={{maxHeight: "80px", paddingBottom: "20px", alignSelf: "center"}}></Image>
+
+    const img = <Image src={sep} sx={{maxHeight: "300px", paddingRight: "40px", paddingLeft: "20px", alignSelf: "center"}}></Image>;
 
     return (
         <div sx={{paddingLeft: "40px", marginTop: "30px", marginBottom: "70px", '@media screen and (min-width: 1400px)': {paddingLeft: '0px'}}}>
