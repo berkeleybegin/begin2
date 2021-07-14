@@ -56,9 +56,10 @@ export default function Footer() {
 
             return (
                 <div sx={{width: "100wh", bg: "#eeeeee", marginTop: "30px"}}>
+            
             <Flex sx={{padding: "40px", maxWidth: "1440px", margin: "auto", flexDirection: "column", '@media screen and (min-width: 1400px)': {paddingLeft: "0px"}}}>
                 <Heading sx={{fontSize: "2em", paddingBottom: "20px"}}>Directory</Heading>
-                <Flex sx={{flexDirection: "row", justifyContent: "space-between", width: "100%"}}>
+                <Flex sx={{flexDirection: "row", justifyContent: "space-between", width: "100%", '@media screen and (max-width: 800px)': {flexDirection: "column"}}}>
                     <div>
                         {display.slice(0, 3)}
                     </div>
@@ -70,12 +71,12 @@ export default function Footer() {
                     {display.slice(5, 7)}
                     </div>
                 </Flex>
-                <Flex sx={{flexDirection: "row", paddingTop: "10px", justifyContent: "space-between"}}>
-                <div sx={{paddingBottom: "20px", width: "50%", paddingRight: "30px"}}>
+                <Flex sx={{flexDirection: "row", paddingTop: "10px", justifyContent: "space-between", '@media screen and (max-width: 800px)': {flexDirection: "column"}}}>
+                <div sx={{paddingBottom: "20px", width: "50%", paddingRight: "30px", '@media screen and (max-width: 800px)': {width: "100%"}}}>
                      <Text sx={{fontSize: "1.2em", fontWeight: 600}}>About Us</Text>
                      <Text>BEGIN (Berkeley Gateway to Innovation) is the University of California, Berkeley’s directory of innovation and entrepreneurship resources and hub for events, news and opportunities. For questions about how to find the best resource for your situation, contact begin@berkeley.edu.</Text>
                 </div>
-                <Flex sx={{width: "50%", flexDirection: "column", paddingLeft: "10px"}}>
+                <Flex sx={{width: "50%", flexDirection: "column", paddingLeft: "10px", '@media screen and (max-width: 800px)': {width: "100%"}}}>
                     <Text sx={{fontWeight: 600, paddingBottom: "10px"}}>Subscribe to Our Newsletter!</Text>
                     <form
                         name="newsletter"

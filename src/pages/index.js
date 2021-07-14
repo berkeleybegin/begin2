@@ -37,7 +37,7 @@ Paragraph.propTypes = {
 }
 
 const NumBlock = () => (
-  <Flex sx={{bg: "#003262", justifyContent: "center"}}>
+  <Flex sx={{bg: "#003262", justifyContent: "center", flexDirection: "row", padding: "0"}}>
     <Flex 
     sx={{
       flexWrap: "wrap", flexDirection: "row", alignItems: "center", justifyContent: "space-around", 
