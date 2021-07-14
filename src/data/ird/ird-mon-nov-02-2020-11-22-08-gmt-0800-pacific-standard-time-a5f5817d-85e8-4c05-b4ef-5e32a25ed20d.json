@@ -1,12 +1,13 @@
 {
+  "calAffiliated": true,
   "templateKey": "ird-resource",
   "date": "2020-11-02T19:22:08.705Z",
-  "id": "a5f5817d-85e8-4c05-b4ef-5e32a25ed20d",
+  "url": "http://scet.berkeley.edu/",
   "title": "Sutardja Center for Entrepreneurship & Technology",
   "tags": [
     "New Venture Education"
   ],
-  "url": "http://scet.berkeley.edu/",
-  "description": "The Pantas and Ting Sutardja Center for Entrepreneurship & Technology is the premier institution at UC Berkeley for the study and practice of entrepreneurship and technology innovation.\n",
-  "image": "/img/scet-logo.png"
+  "id": "a5f5817d-85e8-4c05-b4ef-5e32a25ed20d",
+  "image": "/img/scet-logo.png",
+  "description": "The Pantas and Ting Sutardja Center for Entrepreneurship & Technology is the premier institution at UC Berkeley for the study and practice of entrepreneurship and technology innovation.\n"
 }
