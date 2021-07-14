@@ -41,7 +41,7 @@ const NumBlock = () => (
     <Flex 
     sx={{
       flexWrap: "wrap", flexDirection: "row", alignItems: "center", justifyContent: "space-around", 
-      textAlign: "center", color: "white", padding: ["50px", "70px"], marginTop: "40px", marginBottom: "40px", width: "100%", '@media screen and (max-width: 700px)': {flexDirection: 'column'}, '@media screen and (min-width: 1200px)': {maxWidth: '1400px'}}}
+      textAlign: "center", color: "white", padding: "50px", marginTop: "40px", marginBottom: "40px", width: "100%", '@media screen and (max-width: 900px)': {flexDirection: 'column'}, '@media screen and (min-width: 1200px)': {maxWidth: '1400px'}}}
       >
       <Text sx={{flexBasis: "33%", paddingBottom: "20px"}}> <Heading sx={{fontSize: "3em", padding: 0, margin: 0}}>#1</Heading>Public University</Text>
       <Text sx={{flexBasis: "33%", paddingBottom: "20px"}}> <Heading sx={{fontSize: "3em", padding: 0, margin: 0}}>#2</Heading>University for Entrepreneurs</Text>
