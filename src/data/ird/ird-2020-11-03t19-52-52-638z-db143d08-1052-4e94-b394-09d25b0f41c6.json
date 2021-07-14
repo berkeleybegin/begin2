@@ -1,12 +1,13 @@
 {
+  "calAffiliated": false,
   "templateKey": "ird-resource",
   "date": "2020-11-03T19:52:52.638Z",
+  "url": "https://invent.citris-uc.org/",
   "title": "CITRIS Invention Lab",
   "tags": [
     "Labs & Prototyping"
   ],
   "id": "db143d08-1052-4e94-b394-09d25b0f41c6",
-  "url": "https://invent.citris-uc.org/",
-  "description": "The CITRIS Invention Lab supports faculty, student and community innovation by providing the knowledge, tools and support to rapidly design and prototype novel interactive products, embedded sensing systems and integrated mobile devices.",
-  "image": "/img/citrisinventionlab.png"
+  "image": "/img/citrisinventionlab.png",
+  "description": "The CITRIS Invention Lab supports faculty, student and community innovation by providing the knowledge, tools and support to rapidly design and prototype novel interactive products, embedded sensing systems and integrated mobile devices."
 }
