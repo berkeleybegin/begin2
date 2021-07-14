@@ -1,12 +1,13 @@
 {
+  "calAffiliated": true,
   "templateKey": "ird-resource",
   "date": "2020-11-02T19:33:31.985Z",
+  "url": "https://qb3.berkeley.edu/",
   "title": "California Institute for Quantitative Biosciences (QB3)",
   "tags": [
     "Accelerators & Incubators"
   ],
-  "url": "https://qb3.berkeley.edu/",
   "id": "d4964b81-efaf-48e1-a117-b3f76c6c22eb",
-  "description": "The California Institute for Quantitative Biosciences (QB3) is one of four Governor Gray Davis Institutes for Science and Innovation established in 2000 to ensure the future of the California economy by promoting research and innovation.",
-  "image": "/img/qb3-logo.jpeg"
+  "image": "/img/qb3-logo.jpeg",
+  "description": "The California Institute for Quantitative Biosciences (QB3) is one of four Governor Gray Davis Institutes for Science and Innovation established in 2000 to ensure the future of the California economy by promoting research and innovation."
 }
