@@ -1,12 +1,13 @@
 {
+  "calAffiliated": true,
   "templateKey": "ird-resource",
   "date": "2020-11-03T19:32:04.545Z",
-  "title": "Berkeley-Haas Entrepreneurship Startup Seed Fund",
   "url": "https://entrepreneurship.berkeley.edu/seed-funding/",
+  "title": "Berkeley-Haas Entrepreneurship Startup Seed Fund",
   "tags": [
     "Funding & Grants"
   ],
   "id": "296f38f6-1beb-4b6a-b617-0c2490e5d3e1",
-  "description": "The Haas Student Seed Fund and Sega Sammy Fund provides $5,000 grants and office space to early-stage startups involving current Haas students. The grants are intended for use in prototype development and customer discovery activities.",
-  "image": "/img/entrepreneurship-berkeleyhaas-logo.jpeg"
+  "image": "/img/entrepreneurship-berkeleyhaas-logo.jpeg",
+  "description": "The Haas Student Seed Fund and Sega Sammy Fund provides $5,000 grants and office space to early-stage startups involving current Haas students. The grants are intended for use in prototype development and customer discovery activities."
 }
